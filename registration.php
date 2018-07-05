@@ -27,6 +27,16 @@
                                 div.CNM {
                                     width: 50px;                            
                                 }
+                                div.div1 {  
+                                    width: 320px;
+                                    padding: 10px;
+                                    border: 5px solid gray;
+                                    margin: 0;
+                                }
+
+                                .button {
+                                    width: 50px;
+                                }
                                 </style>
 
 <head>
@@ -108,9 +118,7 @@
                 <div class="row bg-title">
                     <div class="col-sm-9">
                         <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
-                    <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM" ">Create New Member</button>
-                    </div>
+                    
 
 
                         <!-- Modal for Create New Member -->
@@ -342,35 +350,41 @@
                         <!-- End of Modal -->
                 </div>
                 <!-- /row -->
+                <div class = "white-box" id ="div1">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="white-box">
+                        <div class="col-sm-6">
                             <h3 class="box-title">
                                 <?php
                                 echo "New Member As of " . date("Y/m/d") . ":";
                                 ?>
-
                             </h3>
+                        </div>
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM" >Create New Member</button>
+                        </div>
+                </div>
                             <div class="table-responsive">
-                                            <table class="table">
-                <thead>
-                    <tr>
-                        <th>OR NUMBER</th>
-                        <th>ID NUMBER</th>
-                        <th>LAST NAME</th>
-                        <th>FIRST NAME</th>
-                        <th>MIDDLE NAME</th>
-                        <th>ADDRESS</th>
-                        <th>CONTACT NUMBER</th>
-                        <th>BIRTHDAY</th>
-                        <th>AGE</th>
-                        <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
-                        <th>REGISTRATION DATE</th>
-                        <th>EXPIRATION DATE</th>
-                    </tr>
-                </thead>
-                <tbody>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th>OR NUMBER</th>
+                                        <th>ID NUMBER</th>
+                                        <th>LAST NAME</th>
+                                        <th>FIRST NAME</th>
+                                        <th>MIDDLE NAME</th>
+                                        <th>ADDRESS</th>
+                                        <th>CONTACT NUMBER</th>
+                                        <th>BIRTHDAY</th>
+                                        <th>AGE</th>
+                                        <th>GENDER</th>
+                                        <th>CIVIL STATUS</th>
+                                        <th>REGISTRATION DATE</th>
+                                        <th>EXPIRATION DATE</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
                 <?php
                     require 'model/reg.php';
                     foreach ($members as $member) {
@@ -407,14 +421,25 @@
 FRAG;
         }
     ?>
-                </tbody>
-            </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
                     </div>
                 </div>
-                <!-- /.row -->
-            </div>
+
+                    </div>
+                </div>
             <!-- /.container-fluid -->
             <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
         </div>
