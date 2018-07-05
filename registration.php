@@ -368,7 +368,7 @@
                         <th>GENDER</th>
                         <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>EEXPIRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>

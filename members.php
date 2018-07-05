@@ -184,12 +184,12 @@ body {font-family: Arial;}
                         <th>GENDER</th>
                         <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>EEXPIRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php
-                    require 'model/reg.php';
+                    require 'model/memberList.php';
                     foreach ($members as $member) {
 
                     $orNum = $member->getOrNum();
@@ -241,8 +241,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -257,6 +261,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -268,6 +276,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -292,8 +304,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -308,6 +324,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -319,6 +339,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -343,8 +367,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -359,6 +387,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -370,6 +402,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -394,8 +430,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -410,6 +450,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -421,6 +465,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -445,8 +493,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -461,6 +513,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -472,6 +528,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -496,8 +556,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -512,6 +576,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -523,6 +591,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -547,8 +619,12 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -563,6 +639,10 @@ FRAG;
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -574,6 +654,10 @@ FRAG;
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
