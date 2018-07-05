@@ -62,6 +62,8 @@
     border-top: none;
 }
                                 </style>
+                                
+
 
 
 <head>
@@ -81,7 +83,8 @@
     <!-- Custom CSS -->
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="../viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -145,7 +148,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross Member List</h4> </div>
                     <div class="pull-right">
-                        <button>Export</button>
+                        <input id="myInput" type="text" placeholder="Search..">
                     </div>
                 </div>
 <body>
@@ -186,7 +189,7 @@
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/memberList.php';
                     foreach ($members as $member) {
@@ -694,10 +697,7 @@ function openMembership(evt, cityName) {
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script>
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("All").click();
-</script>
+
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
@@ -709,6 +709,7 @@ document.getElementById("All").click();
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+
 </body>
 
 </html>

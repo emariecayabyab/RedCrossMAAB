@@ -8,25 +8,24 @@ NAV - JANN
  - memberlist
  - notification
  - archive
- - save to computer
  
 TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Table title should be Centered
-	- Auto order to DSC
+
+	- Auto order to DSC -- EMM
 	- Sort By
-	- Search Bar
+	- Search Bar -- Emm
 	- Button - All+lelvels of membership
-	- Page Number (Number per page)
+	- Page Number (Number per page) -- ARA
 	- Remove Button per data in Table  - x mark?
 	
-REGISTRATION - ARA (DONE)
+REGISTRATION
 	- Table List of New member (current date)
 	- Create member (Button -Modal)
 		- Add new member without closing modal
 
 MEMBER LIST - EMM
-	- Date Selector to Sort
-	- Export As Excel/Pdf file  (Button -Modal)
+
 
 NOTIFICATION
 	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email
