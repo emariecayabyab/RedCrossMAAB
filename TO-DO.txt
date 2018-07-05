@@ -1,0 +1,53 @@
+* use include function - JANN
+	- nav.php
+	- footer.php
+	- header.php
+	
+NAV - JANN
+ - registration
+ - memberlist
+ - notification
+ - archive
+ - save to computer
+ 
+TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
+	- Table title should be Centered
+	- Auto order to DSC
+	- Sort By
+	- Search Bar
+	- Button - All+lelvels of membership
+	- Page Number (Number per page)
+	- Remove Button per data in Table  - x mark?
+	
+REGISTRATION
+	- Table List of New member (current date)
+	- Create member (Button -Modal)
+		- Add new member without closing modal
+
+MEMBER LIST - EMM
+	- Date Selector to Sort
+	- Export As Excel/Pdf file  (Button -Modal)
+
+NOTIFICATION
+	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email
+	- Expiring members remarks - change to inactive after expiration date
+
+ARCHIVE - EMM
+	- Contains All Expired Membership
+	- Remarks that is not active 
+	- Non editable
+	- View Only
+
+SAVE TO COMPUTER (ARA)
+	- After clicking it will Show Modal
+		MODAL CONTAINS:
+			- specific date or to and from dates
+			- option for excel file or pdf file (Dropdown)
+			
+			
+			
+* research
+ - page number
+ - print to excel
+ - print to pdf
+ 
