@@ -24,7 +24,6 @@
                                 .container {
                                     padding: 16px;
                                 }
-body {font-family: Arial;}
 
 /* Style the tab */
 .tab {

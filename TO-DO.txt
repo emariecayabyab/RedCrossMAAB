@@ -19,7 +19,7 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Page Number (Number per page)
 	- Remove Button per data in Table  - x mark?
 	
-REGISTRATION
+REGISTRATION - ARA (DONE)
 	- Table List of New member (current date)
 	- Create member (Button -Modal)
 		- Add new member without closing modal
