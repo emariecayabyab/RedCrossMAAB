@@ -1,9 +1,9 @@
 <?php
 
 class Member {
-    private $orNum, $IDNum, $lastName, $firstName, $middleName, $address, $contactNumber, $validDate, $expiryDate;
+    private $orNum, $IDNum, $lastName, $firstName, $middleName, $address, $contactNumber,$birthday, $age, $gender, $status, $validDate, $expiryDate, $bloodGroup;
 
-    public function __construct($orNum, $IDNum, $lastName, $firstName, $middleName, $address, $contactNumber, $validDate, $expiryDate)
+    public function __construct($orNum, $IDNum, $lastName, $firstName, $middleName, $address, $contactNumber,$birthday, $age, $gender, $status, $validDate, $expiryDate)
     {
         $this->orNum = $orNum;
         $this->IDNum = $IDNum;
@@ -12,6 +12,10 @@ class Member {
         $this->middleName = $middleName;
         $this->address = $address;
         $this->contactNumber = $contactNumber;
+        $this->birthday = $birthday;
+        $this->age = $age;
+        $this->gender = $gender;
+        $this->status = $status;
         $this->validDate = $validDate;
         $this->expiryDate = $expiryDate;
     }
@@ -56,9 +60,30 @@ class Member {
         return $this->validDate;
     }
 
-  public function geteDate()
+     public function geteDate()
     {
         return $this->expiryDate;
     }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    public function getBday()
+    {
+        return $this->birthday;
+    }
+
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }
+
 ?>

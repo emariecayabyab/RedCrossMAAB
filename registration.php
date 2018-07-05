@@ -352,8 +352,8 @@
 
                             </h3>
                             <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
+                                            <table class="table">
+                <thead>
                     <tr>
                         <th>OR NUMBER</th>
                         <th>ID NUMBER</th>
@@ -362,8 +362,12 @@
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-                        <th>VALID UNTIL</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -378,9 +382,12 @@
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
-
                     echo <<<FRAG
                     <tr>
                     <td>$orNum</td>
@@ -390,6 +397,10 @@
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -397,7 +408,7 @@ FRAG;
         }
     ?>
                 </tbody>
-                                </table>
+            </table>
                             </div>
                         </div>
                     </div>
