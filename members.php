@@ -136,13 +136,11 @@
   <button class="tablinks" onclick="openMembership(event, 'Senior')">Senior</button>
   <button class="tablinks" onclick="openMembership(event, 'Senior Plus')">Senior Plus</button>
 </div>
-<<<<<<< HEAD
+
 <?php
     require 'fragments/detclasses.php';
 ?>
 
-
-=======
 <div id="All" class="tabcontent">
   <h3 class="box-title">All</h3>
         <div class="table-responsive">
@@ -205,7 +203,6 @@ FRAG;
             </table>
         </div>
     </div>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
 <div id="Classic" class="tabcontent">
   <h3 class="box-title">CLASSIC</h3>
         <div class="table-responsive">
@@ -220,21 +217,15 @@ FRAG;
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
-<<<<<<< HEAD
                         <th>BIRTHDATE</th>
-=======
                         <th>BIRTHDAY</th>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
                         <th>AGE</th>
                         <th>GENDER</th>
                         <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
-<<<<<<< HEAD
                         <th>EXPIRY DATE</th>
                         <th>REMARKS</th>
-=======
                         <th>EXPIRATION DATE</th>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
                     </tr>
                 </thead>
                 <tbody>
@@ -415,7 +406,6 @@ FRAG;
                               </table>
                           </div> 
 </div>
-=======
     <table class="table">
                 <thead>
                     <tr>
@@ -475,7 +465,6 @@ FRAG;
             </table>
         </div> 
     </div>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
 
 <div id="Silver" class="tabcontent">
     <h3 class="box-title">SILVER</h3>
@@ -604,7 +593,7 @@ FRAG;
                                         </tr>
                                     </tbody>
                               </table>
-=======
+
     <table class="table">
                 <thead>
                     <tr>
@@ -662,7 +651,7 @@ FRAG;
     ?>
                 </tbody>
             </table>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
+
                           </div>
 </div>
 
@@ -794,7 +783,7 @@ FRAG;
                                     </tbody>
                               </table>
                           </div>
-=======
+
     <table class="table">
                 <thead>
                     <tr>
@@ -853,7 +842,7 @@ FRAG;
                 </tbody>
             </table>
     </div>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
+
 </div>
 
 <div id="Platinum" class="tabcontent">
@@ -983,7 +972,7 @@ FRAG;
                                         </tr>
                                     </tbody>
                               </table>
-=======
+
     <table class="table">
                 <thead>
                     <tr>
@@ -1041,7 +1030,6 @@ FRAG;
     ?>
                 </tbody>
             </table>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
                           </div>
 </div>
 
@@ -1173,7 +1161,7 @@ FRAG;
                                     </tbody>
                               </table>
                           </div>
-=======
+
     <table class="table">
                 <thead>
                     <tr>
@@ -1232,13 +1220,12 @@ FRAG;
                 </tbody>
             </table>
     </div>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
+
 </div>
 
 <div id="Senior Plus" class="tabcontent">
     <h3 class="box-title">Senior Plus</h3>
   <div class="table-responsive">
-<<<<<<< HEAD
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -1363,7 +1350,7 @@ FRAG;
                                     </tbody>
                               </table>
                           </div>
-=======
+
     <table class="table">
                 <thead>
                     <tr>
@@ -1422,7 +1409,6 @@ FRAG;
                 </tbody>
             </table>
     </div>
->>>>>>> a7f2e541d2f2a14e3948ab1522d486f97e78ad70
 </div>
 
 <script>
