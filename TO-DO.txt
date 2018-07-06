@@ -38,8 +38,7 @@ ARCHIVE - EMM
 	- View Only
 
 SAVE TO COMPUTER (ARA)
-	- After clicking it will Show Modal
-		MODAL CONTAINS:
+	- per table except archive table
 			- specific date or to and from dates
 			- option for excel file or pdf file (Dropdown)
 			
