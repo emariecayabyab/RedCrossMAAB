@@ -52,6 +52,7 @@
     <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="viewsControl/css/animate.css" rel="stylesheet">
+    <link href="viewsControl/js/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
@@ -69,30 +70,8 @@
 </head>
 
 <body class="fix-header">
-        <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header">
-                <!-- /Logo -->
-                <ul class="nav navbar-top-links navbar-right pull-right">
-                    <li>
-                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
-                    </li>
-                </ul>
-            </div>
-                <!-- /Logo -->
-                <!--ul class="nav navbar-top-links navbar-right pull-right">
-                    <li>
-                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
-                    </li>
-                    <li>
-                        <a class="profile-pic" href="#"> <img src="../plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
-                    </li>
-                </ul-->
-            <!-- /.navbar-header -->
-            <!-- /.navbar-top-links -->
-            <!-- /.navbar-static-side -->
-        </nav>
+    <?php include('header.php'); ?>
+</body>
         <!-- End Top Navigation -->
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
@@ -100,15 +79,7 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <ul class="nav" id="side-menu">
-                    <li style="padding: 70px 0 0;">
-                        <a href="registration.php" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Registration</a>
-                    </li>
-                    <li>
-                        <a href="members.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Membership List</a>
-                    </li>
-                    <li>
-                        <a href="notifications.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Notifications</a>
-                    </li>
+                    <?php include('sidebar.php'); ?>
                 </ul>
             </div>
         </div>
@@ -120,7 +91,20 @@
                         <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
                     
 
-
+                        <div class="container" style="margin-top:35px">
+        <h4>Select Number of Rows</h4>
+        <div class="form-group">
+            <select name="state" id="maxRows" class="form-control" style="width:150px;">
+                <option value="5000">Show All</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select>
+        </div>
                         <!-- Modal for Create New Member -->
                         <div class="modal" id="CNM">
                             <div class="modal-dialog">
@@ -366,7 +350,7 @@
                         </div>
                 </div>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="tblData">
                                     <thead>
                                         <tr>
                                         <th>OR NUMBER</th>
@@ -423,8 +407,14 @@ FRAG;
     ?>
                                 </tbody>
                             </table>
+                            <div class="pagination-container">
+            <nav>
+                <ul class="pagination"></ul>
+            </nav>
+        </div>
                         </div>
-
+                <br>
+                <br>
                 <div class="row">
                     <div class="col-sm-6">
                     </div>
@@ -433,7 +423,7 @@ FRAG;
                         </button>
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
                 </div>
@@ -458,6 +448,38 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script type="text/javascript">
+        function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+    </script>
 </body>
 
 </html>

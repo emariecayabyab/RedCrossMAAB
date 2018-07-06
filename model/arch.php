@@ -1,7 +1,7 @@
 <?php
 	require 'fragments/db.php';
 
-	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate, expiryDate FROM maablist WHERE status="inactive" ORDER BY validDate DESC';
+	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber,validDate, expiryDate FROM maablist WHERE remarks="inactive" ORDER BY validDate DESC';
     $result = mysqli_query($db, $query);
 
     $members = [];
