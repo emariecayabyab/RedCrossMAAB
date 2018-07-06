@@ -94,7 +94,8 @@
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
-                        <th>VALID UNTIL</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,6 +110,7 @@
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
 
                     echo <<<FRAG
@@ -120,6 +122,7 @@
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
 FRAG;
