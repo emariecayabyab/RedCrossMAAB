@@ -123,13 +123,13 @@
                                         <label>Choose the type of membership/insurance:</label>
                                     </div>
                                     <div class = "col-sm-8">
-                                        <form action="/action_page.php">
-                                            <select name="insurance type">
+                                        <form action="formMod.php" method="post">
+                                            <select name="type">
                                                 <option value="Classic">Classic</option>
-                                                <option value="Bronze">Bronze</option>
-                                                <option value="Silver">Silver</option>
-                                                <option value="Gold">Gold</option>
-                                                <option value="Platinum"> Platinum </option>
+                                                <option value="Bronze">Premier Bronze</option>
+                                                <option value="Silver">Premier Silver</option>
+                                                <option value="Gold">Premier Gold</option>
+                                                <option value="Platinum"> Premier Platinum </option>
                                                 <option value="Senior">Senior</option>
                                                 <option value="Senior Plus">Senior Plus</option>
                                             </select>
@@ -139,12 +139,28 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-4">
+                                        <label for="orNum">OR Number</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                            <input autocomplete="false" type = "text" id="orNum" name="orNum">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="idNum">ID Number</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                            <input autocomplete="false" type = "text" id="idnum" name="idnum">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
                                         <label for="fname">First Name</label>   
                                     </div>
                                     <div class="col-sm-8">
-                                        <form>
                                             <input autocomplete="false" type = "text" id="fname" name="fname">
-                                        </form>
                                     </div>
                                 </div>
                                 <br>
@@ -153,9 +169,9 @@
                                         <label for="midname">Middle Name</label>   
                                     </div>
                                     <div class="col-sm-8">
-                                        <form>
+                                        
                                             <input autocomplete="false" type = "text" id="midname" name="midname">
-                                        </form>
+                                       
                                     </div>
                                 </div>
                                 <br>
@@ -164,9 +180,9 @@
                                         <label for="lname">Last Name</label>   
                                     </div>
                                     <div class="col-sm-8">
-                                        <form>
+                                        
                                             <input autocomplete="false" type = "text" id="lname" name="lname">
-                                        </form>
+                                        
                                     </div>
                                 </div>
                                 <br>
@@ -175,9 +191,9 @@
                                         <label for="add">Address</label>   
                                     </div>
                                     <div class="col-sm-8">
-                                        <form>
-                                            <input autocomplete="false" type = "text" id="add" name="add">
-                                        </form>
+                                        
+                                            <input autocomplete="false" type = "text" id="addr" name="addr">
+                                       
                                     </div>
                                 </div>
                                 <br>
@@ -186,83 +202,77 @@
                                         <label for="contact">Contact Number</label>   
                                     </div>
                                     <div class="col-sm-8">
-                                        <form>
+                                    
                                             <input autocomplete="false" type = "text" id="contact" name="contact">
-                                        </form>
+                                       
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="mail">Email Add</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <form>
-                                            <input autocomplete="false" type = "text" id="mail" name="mail">
-                                        </form>
-                                    </div>
-                                </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        <label for="fname">Birthday</label>   
+                                        <label for="bday">Birthday</label>   
                                     </div>
                                     <div class="col-sm-3">
-                                        <form>
-                                            <input autocomplete="false" type = "text" id="bday" name="bday" label="year">
-                                        </form>
+                                       
+                                            <input autocomplete="false" type = "text" id="byear" name="byear" label="year">
+                                       
                                     </div>
                                     <div class="col-sm-3">
-                                        <form action="/action_page.php">
-                                            <select name="month">
-                                                <option value="January">January</option>
-                                                <option value="February">February</option>
-                                                <option value="March">March</option>
-                                                <option value="April">April</option>
-                                                <option value="May"> May </option>
-                                                <option value="June">June</option>
-                                                <option value="July">July</option>
-                                                <option value="August">August</option>
-                                                <option value="September">September</option>
-                                                <option value="October">October</option>
-                                                <option value="November">November</option>
-                                                <option value="December">December</option>
+                                        
+                                            <select name="bmonth">
+                                                <option disabled selected>Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05"> May </option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
                                             </select>
-                                        </form>
+                                        
                                     </div>
                                     <div class="col-sm-2">
-                                        <select name="date">
-                                            <option value="one">1</option>
-                                            <option value="two">2</option>
-                                            <option value="three">3</option>
-                                            <option value="four">4</option>
-                                            <option value="five">5</option>
-                                            <option value="six">6</option>
-                                            <option value="seven">7</option>
-                                            <option value="eight">8</option>
-                                            <option value="nine">9</option>
-                                            <option value="ten">10</option>
-                                            <option value="eleven">11</option>
-                                            <option value="twelve">12</option>
-                                            <option value="thirteen">13</option>
-                                            <option value="fourteen">14</option>
-                                            <option value="fifteen">15</option>
-                                            <option value="sixteen">16</option>
-                                            <option value="seventeen">17</option>
-                                            <option value="eighteen">18</option>
-                                            <option value="nineteen">19</option>
-                                            <option value="twenty">20</option>
-                                            <option value="twentytwo">20</option>
-                                            <option value="twentythree">23</option>
-                                            <option value="twentyfour">24</option>
-                                            <option value="twentyfive">25</option>
-                                            <option value="twentysix">26</option>
-                                            <option value="twentyseven">27</option>
-                                            <option value="twentyeight">28</option>
-                                            <option value="twentynine">29</option>
-                                            <option value="thirty">30</option>
-                                            <option value="thirtyone">31</option>
+                                    
+                                        <select name="bdate">
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
                                         </select>
+                                    
                                     </div>
                                 </div>
                                 <br>
@@ -271,9 +281,9 @@
                                         <label for="age">Age</label>
                                     </div>
                                     <div class ="col-sm-3">
-                                        <form>
+                                        
                                             <input autocomplete="false" type = "text" id="age" name="age">
-                                        </form>
+                                     
                                     </div>
                                 </div>
                                 <br>
@@ -282,29 +292,26 @@
                                         <label for="Sex">Sex</label>
                                     </div>
                                     <div class ="col-sm-3">
-                                        <form action="/action_page.php">
-                                            <select name="Sex">
-                                                <option value="Female">Female</option>
-                                                <option value="Male">Male</option>
+                                        
+                                            <select name="sex">
+                                                <option value="F">Female</option>
+                                                <option value="M">Male</option>
                                             </select>
-                                        </form>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class ="col-sm-4">
-                                        <label for="Sex">Civil Status</label>
+                                        <label for="status">Civil Status</label>
                                     </div>
                                     <div class ="col-sm-3">
-                                        <form action="/action_page.php">
-                                            <select name="Sex">
+                                            <select name="status">
                                                 <option value="Single">Single</option>
                                                 <option value="Married">Married</option>
                                                 <option value="Widowed">Widowed</option>
                                                 <option value="Seperated">Seperated</option>
                                                 <option value="Divorced">Divorced</option>
                                             </select>
-                                        </form>
                                     </div>
                                 </div>
                                 <br>
@@ -313,9 +320,16 @@
                                         <label for="vdate">Valid Date</label>
                                     </div>
                                     <div class ="col-sm-6">
-                                        <form>
-                                            <input autocomplete="false" type = "text" id="vdate" name="vdate">
-                                        </form>
+                                            <input autocomplete="false" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class ="col-sm-4">
+                                        <label for="edate">Expiration Date</label>
+                                    </div>
+                                    <div class ="col-sm-6">
+                                            <input autocomplete="false" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
                                     </div>
                                 </div>
                                 <br>
@@ -324,8 +338,9 @@
             
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger">Add</button>
+                                    <button type="button" class="btn btn-danger" name="add">Add</button>
                             </div>
+                        </form>
             
                             </div>
                             </div>
@@ -353,19 +368,19 @@
                                 <table class="table" id="tblData">
                                     <thead>
                                         <tr>
-                                        <th>OR NUMBER</th>
-                                        <th>ID NUMBER</th>
-                                        <th>LAST NAME</th>
-                                        <th>FIRST NAME</th>
-                                        <th>MIDDLE NAME</th>
-                                        <th>ADDRESS</th>
-                                        <th>CONTACT NUMBER</th>
-                                        <th>BIRTHDAY</th>
-                                        <th>AGE</th>
-                                        <th>GENDER</th>
-                                        <th>CIVIL STATUS</th>
-                                        <th>REGISTRATION DATE</th>
-                                        <th>EXPIRATION DATE</th>
+                                        <th onclick="sortTable(0)">OR NUMBER</th>
+                                        <th onclick="sortTable(1)">ID NUMBER</th>
+                                        <th onclick="sortTable(2)">LAST NAME</th>
+                                        <th onclick="sortTable(3)">FIRST NAME</th>
+                                        <th onclick="sortTable(4)">MIDDLE NAME</th>
+                                        <th onclick="sortTable(5)">ADDRESS</th>
+                                        <th onclick="sortTable(6)">CONTACT NUMBER</th>
+                                        <th onclick="sortTable(7)">BIRTHDAY</th>
+                                        <th onclick="sortTable(8)">AGE</th>
+                                        <th onclick="sortTable(9)">GENDER</th>
+                                        <th onclick="sortTable(10)">CIVIL STATUS</th>
+                                        <th onclick="sortTable(11)">REGISTRATION DATE</th>
+                                        <th onclick="sortTable(12)">EXPIRATION DATE</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -480,6 +495,63 @@ FRAG;
     }
 }
     </script>
+    <script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tblData");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
 </body>
 
 </html>
