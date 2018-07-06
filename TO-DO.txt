@@ -14,10 +14,11 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 
 	- Auto order to DSC -- EMM (DONE)
 	- Sort By
-	- Search Bar -- Emm
-	- Button - All+lelvels of membership
+	- Search Bar -- Emm (DONE)
+	- Button - All+lelvels of membership (DONE)
 	- Page Number (Number per page) -- ARA
 	- Remove Button per data in Table  - x mark?
+	- default tab ung ALL
 	
 REGISTRATION
 	- Table List of New member (current date) (DONE)
@@ -30,11 +31,13 @@ MEMBER LIST
 	- table (DONE)
 	- Save PDF
 	- Save Excel
+	- specific date or to and from dates
 
 
 NOTIFICATION
 	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email (DONE)
 	- Expiring members remarks - change to inactive after expiration date
+	- Sort by
 	- Save PDF
 	- Save Excel
 
@@ -46,8 +49,8 @@ ARCHIVE (DONE)
 
 SAVE TO COMPUTER (ARA)
 	- per table except archive table
-			- specific date or to and from dates
-			- option for excel file or pdf file (Dropdown)
+	- specific date or to and from dates
+	- option for excel file or pdf file (Dropdown)
 			
 			
 			

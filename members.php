@@ -23,7 +23,7 @@
                                 /* Add padding to container elements */
                                 .container {
                                     padding: 16px;
-                                }
+                               }
 
 /* Style the tab */
 .tab {
@@ -57,7 +57,7 @@
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 6px 12px
     border: 1px solid #ccc;
     border-top: none;
 }
@@ -84,8 +84,10 @@
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="../viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+    <script src="../viewsControl/jQuery/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--
+     HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -95,7 +97,7 @@
 
 <body class="fix-header">
 	<?php include('header.php'); ?>	
-</body>
+
         <!-- End Top Navigation -->
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
@@ -122,7 +124,7 @@
                         <input id="myInput" type="text" placeholder="Search..">
                     </div>
                 </div>
-<body>
+
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12">
             <div class="white-box">
@@ -353,7 +355,7 @@ FRAG;
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/silver.php';
                     foreach ($members as $member) {
@@ -392,8 +394,7 @@ FRAG;
     ?>
                 </tbody>
             </table>
-
-                          </div>
+        </div>
 </div>
 
 <div id="Gold" class="tabcontent">
@@ -417,7 +418,7 @@ FRAG;
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/gold.php';
                     foreach ($members as $member) {
@@ -481,7 +482,7 @@ FRAG;
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/platinum.php';
                     foreach ($members as $member) {
@@ -544,7 +545,7 @@ FRAG;
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/senior.php';
                     foreach ($members as $member) {
@@ -608,7 +609,7 @@ FRAG;
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/seniorplus.php';
                     foreach ($members as $member) {
@@ -688,6 +689,16 @@ function openMembership(evt, cityName) {
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 </body>
 

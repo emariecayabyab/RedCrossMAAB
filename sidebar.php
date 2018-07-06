@@ -16,9 +16,6 @@
 					<li>
                         <a href="archive.php" class="waves-effect"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>Archives</a>
                     </li>
-					<li>
-                        <a href="save.php" class="waves-effect"><i class="fa fa-save (alias) fa-fw" aria-hidden="true"></i>Save to Computer</a>
-                    </li>
                 </ul>
             </div>
         </div>

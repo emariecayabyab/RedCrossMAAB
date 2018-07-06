@@ -44,6 +44,8 @@
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+   <script src="../viewsControl/jQuery/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -72,6 +74,9 @@
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross Expiring Membership List</h4> </div>
+                    <div class="pull-right">
+                        <input id="myInput" type="text" placeholder="Search..">
+                    </div>
                 </div>
                 <!-- /row -->
                 <div class="row">
@@ -98,7 +103,7 @@
                         <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/notif.php';
                     foreach ($members as $member) {
@@ -200,6 +205,16 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </body>
 
 </html>
