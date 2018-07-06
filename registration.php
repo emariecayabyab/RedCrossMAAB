@@ -57,12 +57,20 @@
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<!--K -->
+<script type="text/javascript" src="viewsControl/jQuery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="viewsControl/bootstrap/js/bootstrap.min.js"></script>
+<!--K-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -419,7 +427,8 @@ FRAG;
                     <div class="col-sm-6">
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
+                        <button id="exportButton" type="button" class="btn btn-danger btn-block waves-effect waves-light" ><span class="fa fa-file-pdf-o">Save as PDF
+                        </span>
                         </button>
                     </div>
                     <div class="col-sm-3">
@@ -448,6 +457,7 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <!-- Export as Excel -->
     <script type="text/javascript">
         function exportTableToExcel(tableID, filename = ''){
     var downloadLink;
@@ -480,6 +490,85 @@ FRAG;
     }
 }
     </script>
+    <!-- Export as PDF -->
+    <script type="text/javascript">
+    jQuery(function ($) {
+        $("#exportButton").click(function () {
+            // parse the HTML table element having an id=exportTable
+            var dataSource = shield.DataSource.create({
+                data: "#tblData",
+                schema: {
+                    type: "table",
+                    fields: {
+                        ORNUMBER: { type: Number },
+                        IDNUMBER: { type: Number },
+                        LASTNAME: { type: String },
+                        FIRSTNAME: { type: String },
+                        MIDDLENAME: {type: String},
+                        ADDRESS: {type: String},
+                        CONTACTNUMBER: {type: Number},
+                        BIRTHDAY: {type: Number},
+                        AGE: {type: Number},
+                        GENDER: {type: String},
+                        CIVILSTATUS: {type: String},
+                        REGISTRATIONDATE: {type: Number},
+                        EXPIRATIONDATE: {type: Number}
+
+
+                    }
+                }
+            });
+
+            // when parsing is done, export the data to PDF
+            dataSource.read().then(function (data) {
+                var pdf = new shield.exp.PDFDocument({
+                    author: "PhilippineRedCross",
+                    created: new Date()
+                });
+
+                pdf.addPage("a4", "landscape");
+
+                pdf.table(
+                    50,
+                    50,
+                    data,
+                    [
+                        { field: "OR NUMBER", title: "OR NUMBER", width: 70 },
+                        { field: "ID NUMBER", title: "ID NUMBER", width: 70 },
+                        { field: "LAST NAME", title: "LAST NAME", width: 120 }
+                        { field: "FIRST NAME", title: "FIRST NAME", width: 120 }
+                        { field: "MIDDLE NAME", title: "MIDDLE NAME", width: 110 }
+                        { field: "LAST NAME", title: "LAST NAME", width: 110 }
+                        { field: "ADDRESS", title: "ADDRESS", width: 130 }
+                        { field: "CONTACT NUMBER", title: "CONTACT NUMBER", width: 80 }
+                        { field: "BIRTHDAY", title: "BIRTHDAY", width: 70 }
+                        { field: "AGE", title: "AGE", width: 50 }
+                        { field: "GENDER", title: "GENDER", width: 50 }
+                        { field: "CIVIL STATUS", title: "CIVIL STATUS", width: 70 }
+                        { field: "REGISTRATION DATE", title: "REGISTRATION DATE", width: 70 }
+                        { field: "EXPIRATION DATE", title: "EXPIRATION DATE", width: 70 }
+                    ],
+                    {
+                        margins: {
+                            top: 50,
+                            left: 50
+                        }
+                    }
+                );
+
+                pdf.saveAs({
+                    fileName: "FileName"
+                });
+            });
+        });
+    });
+</script>
+
+<style>
+    #exportButton {
+        border-radius: 0;
+    }
+</style>
 </body>
 
 </html>
