@@ -88,7 +88,7 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-sm-9">
-                        <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
+                        <h4 class="page-title">Philippine Red Cross New Membership List</h4> </div>
                     
 
                         <div class="container" style="margin-top:35px">

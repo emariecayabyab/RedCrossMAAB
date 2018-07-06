@@ -1,18 +1,18 @@
 * use include function - JANN
-	- nav.php
-	- footer.php
-	- header.php
+	- nav.php (DONE)
+	- footer.php (DONE)
+	- header.php (DONE)
 	
 NAV - JANN
- - registration
- - memberlist
- - notification
- - archive
+ - registration (DONE)
+ - memberlist (DONE)
+ - notification (DONE)
+ - archive (DONE)
  
 TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Table title should be Centered
 
-	- Auto order to DSC -- EMM
+	- Auto order to DSC -- EMM (DONE)
 	- Sort By
 	- Search Bar -- Emm
 	- Button - All+lelvels of membership
@@ -20,22 +20,29 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Remove Button per data in Table  - x mark?
 	
 REGISTRATION
-	- Table List of New member (current date)
-	- Create member (Button -Modal)
+	- Table List of New member (current date) (DONE)
+	- Create member (Button -Modal) (DONE)
 		- Add new member without closing modal
+	- Save PDF
+	- Save Excel
 
-MEMBER LIST - EMM
+MEMBER LIST
+	- table (DONE)
+	- Save PDF
+	- Save Excel
 
 
 NOTIFICATION
-	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email
+	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email (DONE)
 	- Expiring members remarks - change to inactive after expiration date
+	- Save PDF
+	- Save Excel
 
-ARCHIVE - EMM
-	- Contains All Expired Membership
-	- Remarks that is not active 
-	- Non editable
-	- View Only
+ARCHIVE (DONE)
+	- Contains All Expired Membership (DONE)
+	- Remarks that is not active (DONE)
+	- Non editable (DONE)
+	- View Only (DONE)
 
 SAVE TO COMPUTER (ARA)
 	- per table except archive table

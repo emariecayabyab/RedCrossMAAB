@@ -117,7 +117,7 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Philippine Red Cross Member List</h4> </div>
+                        <h4 class="page-title">Philippine Red Cross Membership List</h4> </div>
                     <div class="pull-right">
                         <input id="myInput" type="text" placeholder="Search..">
                     </div>
