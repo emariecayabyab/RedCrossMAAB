@@ -84,7 +84,7 @@
 
                             </h3>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="tblData">
                                     <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -128,6 +128,20 @@ FRAG;
                 </tbody>
                                 </table>
                             </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                </div>
                         </div>
                     </div>
                 </div>
@@ -140,6 +154,38 @@ FRAG;
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
+    <script type="text/javascript">
+        function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+    </script>
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>

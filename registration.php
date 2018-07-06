@@ -9,12 +9,13 @@
                                 body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
                                 /* Full-width input fields */
-                                input[type=text], input[type=password] {
+                                input[type=text] {
                                     width: 100%;
-                                    padding: 15px;
-                                    margin: 5px 0 22px 0;
+                                    height: 25px;
+                                    padding: 0px;
                                     display: inline-block;
-                                    border: none;
+                                    border-width: 1px;
+                                    border-style: solid;
                                     background: #f1f1f1;
                                 }
 
@@ -23,7 +24,19 @@
                                 .container {
                                     padding: 16px;
                                 }
+                                div.CNM {
+                                    width: 50px;                            
+                                }
+                                div.div1 {  
+                                    width: 320px;
+                                    padding: 10px;
+                                    border: 5px solid gray;
+                                    margin: 0;
+                                }
 
+                                .button {
+                                    width: 50px;
+                                }
                                 </style>
 
 <head>
@@ -35,11 +48,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
-    <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
     <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="viewsControl/css/animate.css" rel="stylesheet">
+    <link href="viewsControl/js/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
@@ -50,14 +63,14 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
 <body class="fix-header">
-	<?php include('header.php'); ?>
+    <?php include('header.php'); ?>
 </body>
         <!-- End Top Navigation -->
         <!-- ============================================================== -->
@@ -66,7 +79,7 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <ul class="nav" id="side-menu">
-					<?php include('sidebar.php'); ?>
+                    <?php include('sidebar.php'); ?>
                 </ul>
             </div>
         </div>
@@ -74,11 +87,24 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <div class="col-sm-9">
                         <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
-                    <div class="pull-right">
-                        <button class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM">Create New Member</button></div>
+                    
 
+                        <div class="container" style="margin-top:35px">
+        <h4>Select Number of Rows</h4>
+        <div class="form-group">
+            <select name="state" id="maxRows" class="form-control" style="width:150px;">
+                <option value="5000">Show All</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select>
+        </div>
                         <!-- Modal for Create New Member -->
                         <div class="modal" id="CNM">
                             <div class="modal-dialog">
@@ -89,7 +115,8 @@
                                     <h4 class="modal-title">Create New Member</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-                        <!-- Modal body -->
+            
+                            <!-- Modal body -->
                             <div class="modal-body">
                                 <div class ="row">
                                     <div class = "col-sm-4">
@@ -305,38 +332,43 @@
                         </div>
       
                         <!-- End of Modal -->
-
                 </div>
                 <!-- /row -->
+                <div class = "white-box" id ="div1">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="white-box">
+                        <div class="col-sm-6">
                             <h3 class="box-title">
                                 <?php
                                 echo "New Member As of " . date("Y/m/d") . ":";
                                 ?>
-
                             </h3>
+                        </div>
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM" >Create New Member</button>
+                        </div>
+                </div>
                             <div class="table-responsive">
-                                            <table class="table">
-                <thead>
-                    <tr>
-                        <th>OR NUMBER</th>
-                        <th>ID NUMBER</th>
-                        <th>LAST NAME</th>
-                        <th>FIRST NAME</th>
-                        <th>MIDDLE NAME</th>
-                        <th>ADDRESS</th>
-                        <th>CONTACT NUMBER</th>
-                        <th>BIRTHDAY</th>
-                        <th>AGE</th>
-                        <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
-                        <th>REGISTRATION DATE</th>
-                        <th>EXPIRATION DATE</th>
-                    </tr>
-                </thead>
-                <tbody>
+                                <table class="table" id="tblData">
+                                    <thead>
+                                        <tr>
+                                        <th>OR NUMBER</th>
+                                        <th>ID NUMBER</th>
+                                        <th>LAST NAME</th>
+                                        <th>FIRST NAME</th>
+                                        <th>MIDDLE NAME</th>
+                                        <th>ADDRESS</th>
+                                        <th>CONTACT NUMBER</th>
+                                        <th>BIRTHDAY</th>
+                                        <th>AGE</th>
+                                        <th>GENDER</th>
+                                        <th>CIVIL STATUS</th>
+                                        <th>REGISTRATION DATE</th>
+                                        <th>EXPIRATION DATE</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
                 <?php
                     require 'model/reg.php';
                     foreach ($members as $member) {
@@ -373,14 +405,31 @@
 FRAG;
         }
     ?>
-                </tbody>
-            </table>
-                            </div>
+                                </tbody>
+                            </table>
+                            <div class="pagination-container">
+            <nav>
+                <ul class="pagination"></ul>
+            </nav>
+        </div>
                         </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
                     </div>
                 </div>
-                <!-- /.row -->
-            </div>
+
+                    </div>
+                </div>
             <!-- /.container-fluid -->
             <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
         </div>
@@ -399,6 +448,38 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script type="text/javascript">
+        function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+    </script>
 </body>
 
 </html>

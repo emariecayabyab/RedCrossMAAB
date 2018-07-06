@@ -81,7 +81,7 @@
                                 Expired Membership
                             </h3>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" >
                                     <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -128,6 +128,18 @@ FRAG;
                 </tbody>
                                 </table>
                             </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
+                        </button>
+                    </div>
+                </div>
                         </div>
                     </div>
                 </div>
@@ -140,6 +152,7 @@ FRAG;
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
+    
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
