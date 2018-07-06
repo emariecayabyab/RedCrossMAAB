@@ -44,6 +44,8 @@
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
+   <script src="../viewsControl/jQuery/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -71,7 +73,10 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
+                        <h4 class="page-title">Philippine Red Cross Expiring Membership List</h4> </div>
+                    <div class="pull-right">
+                        <input id="myInput" type="text" placeholder="Search..">
+                    </div>
                 </div>
                 <!-- /row -->
                 <div class="row">
@@ -94,10 +99,11 @@
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
                         <th>CONTACT NUMBER</th>
-                        <th>VALID UNTIL</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 <?php
                     require 'model/notif.php';
                     foreach ($members as $member) {
@@ -109,6 +115,7 @@
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
                     $contactNumber = $member->getconNum();
+                    $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
 
                     echo <<<FRAG
@@ -120,6 +127,7 @@
                     <td>$middleName</td>
                     <td>$address</td>
                     <td>$contactNumber</td>
+                    <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
 FRAG;
@@ -197,6 +205,16 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </body>
 
 </html>
