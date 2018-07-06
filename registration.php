@@ -50,6 +50,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
 <body class="fix-header">
@@ -73,7 +77,235 @@
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross New Member List</h4> </div>
                     <div class="pull-right">
-                        <button class="btn btn-danger btn-block waves-effect waves-light">Create New Member</button></div>
+                        <button class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM">Create New Member</button></div>
+
+                        <!-- Modal for Create New Member -->
+                        <div class="modal" id="CNM">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+          
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                    <h4 class="modal-title">Create New Member</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                        <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class ="row">
+                                    <div class = "col-sm-4">
+                                        <label>Choose the type of membership/insurance:</label>
+                                    </div>
+                                    <div class = "col-sm-8">
+                                        <form action="/action_page.php">
+                                            <select name="insurance type">
+                                                <option value="Classic">Classic</option>
+                                                <option value="Bronze">Bronze</option>
+                                                <option value="Silver">Silver</option>
+                                                <option value="Gold">Gold</option>
+                                                <option value="Platinum"> Platinum </option>
+                                                <option value="Senior">Senior</option>
+                                                <option value="Senior Plus">Senior Plus</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="fname">First Name</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="fname" name="fname">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="midname">Middle Name</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="midname" name="midname">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="lname">Last Name</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="lname" name="lname">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="add">Address</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="add" name="add">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="contact">Contact Number</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="contact" name="contact">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="mail">Email Add</label>   
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="mail" name="mail">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="fname">Birthday</label>   
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="bday" name="bday" label="year">
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <form action="/action_page.php">
+                                            <select name="month">
+                                                <option value="January">January</option>
+                                                <option value="February">February</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May"> May </option>
+                                                <option value="June">June</option>
+                                                <option value="July">July</option>
+                                                <option value="August">August</option>
+                                                <option value="September">September</option>
+                                                <option value="October">October</option>
+                                                <option value="November">November</option>
+                                                <option value="December">December</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select name="date">
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                            <option value="five">5</option>
+                                            <option value="six">6</option>
+                                            <option value="seven">7</option>
+                                            <option value="eight">8</option>
+                                            <option value="nine">9</option>
+                                            <option value="ten">10</option>
+                                            <option value="eleven">11</option>
+                                            <option value="twelve">12</option>
+                                            <option value="thirteen">13</option>
+                                            <option value="fourteen">14</option>
+                                            <option value="fifteen">15</option>
+                                            <option value="sixteen">16</option>
+                                            <option value="seventeen">17</option>
+                                            <option value="eighteen">18</option>
+                                            <option value="nineteen">19</option>
+                                            <option value="twenty">20</option>
+                                            <option value="twentytwo">20</option>
+                                            <option value="twentythree">23</option>
+                                            <option value="twentyfour">24</option>
+                                            <option value="twentyfive">25</option>
+                                            <option value="twentysix">26</option>
+                                            <option value="twentyseven">27</option>
+                                            <option value="twentyeight">28</option>
+                                            <option value="twentynine">29</option>
+                                            <option value="thirty">30</option>
+                                            <option value="thirtyone">31</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class ="col-sm-4">
+                                        <label for="age">Age</label>
+                                    </div>
+                                    <div class ="col-sm-3">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="age" name="age">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class ="col-sm-4">
+                                        <label for="Sex">Sex</label>
+                                    </div>
+                                    <div class ="col-sm-3">
+                                        <form action="/action_page.php">
+                                            <select name="Sex">
+                                                <option value="Female">Female</option>
+                                                <option value="Male">Male</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class ="col-sm-4">
+                                        <label for="Sex">Civil Status</label>
+                                    </div>
+                                    <div class ="col-sm-3">
+                                        <form action="/action_page.php">
+                                            <select name="Sex">
+                                                <option value="Single">Single</option>
+                                                <option value="Married">Married</option>
+                                                <option value="Widowed">Widowed</option>
+                                                <option value="Seperated">Seperated</option>
+                                                <option value="Divorced">Divorced</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class ="col-sm-4">
+                                        <label for="vdate">Valid Date</label>
+                                    </div>
+                                    <div class ="col-sm-6">
+                                        <form>
+                                            <input autocomplete="false" type = "text" id="vdate" name="vdate">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+
+                            </div>
+            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger">Add</button>
+                            </div>
+            
+                            </div>
+                            </div>
+                        </div>
+      
+                        <!-- End of Modal -->
+
                 </div>
                 <!-- /row -->
                 <div class="row">
