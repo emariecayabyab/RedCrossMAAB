@@ -93,6 +93,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<!-- pagination-->
+
+    <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="fix-header">
@@ -120,9 +124,6 @@
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross Membership List</h4> </div>
-                    <div class="pull-right">
-                        <input id="myInput" type="text" placeholder="Search..">
-                    </div>
                 </div>
 
     <div class="row">
@@ -147,7 +148,6 @@
 ?>
 
 <div id="All" class="tabcontent">
-  <h3 class="box-title">All</h3>
         <div class="table-responsive">
 <table class="table">
                 <thead>
@@ -209,7 +209,6 @@ FRAG;
         </div>
     </div>
 <div id="Classic" class="tabcontent">
-  <h3 class="box-title">CLASSIC</h3>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -272,7 +271,6 @@ FRAG;
     </div>
 
 <div id="Bronze" class="tabcontent">
-    <h3 class="box-title">BRONZE</h3>
   <div class="table-responsive">
 <table class="table">
                 <thead>
@@ -335,7 +333,6 @@ FRAG;
     </div>
 
 <div id="Silver" class="tabcontent">
-    <h3 class="box-title">SILVER</h3>
   <div class="table-responsive">
     <table class="table">
                 <thead>
@@ -398,7 +395,6 @@ FRAG;
 </div>
 
 <div id="Gold" class="tabcontent">
-    <h3 class="box-title">Gold</h3>
   <div class="table-responsive">
     <table class="table">
                 <thead>
@@ -462,7 +458,6 @@ FRAG;
 </div>
 
 <div id="Platinum" class="tabcontent">
-    <h3 class="box-title">Platinum</h3>
   <div class="table-responsive">
     <table class="table">
                 <thead>
@@ -525,7 +520,6 @@ FRAG;
 </div>
 
 <div id="Senior" class="tabcontent">
-    <h3 class="box-title">Senior</h3>
   <div class="table-responsive">
     <table class="table">
                 <thead>
@@ -589,7 +583,6 @@ FRAG;
 </div>
 
 <div id="Senior Plus" class="tabcontent">
-    <h3 class="box-title">Senior Plus</h3>
   <div class="table-responsive">
     <table class="table">
                 <thead>
@@ -671,7 +664,7 @@ function openMembership(evt, cityName) {
                     </div>
                 </div>
             </div>
-            <!-- /.container-fluid -->
+
             <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
         </div>
         <!-- /#page-wrapper -->
@@ -690,7 +683,7 @@ function openMembership(evt, cityName) {
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script>
+    <!--<script>
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -699,7 +692,23 @@ $(document).ready(function(){
     });
   });
 });
-</script>
+</script>-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".table").DataTable({
+                "ordering": true,
+                "searching": true,
+                "paging": true,
+            });
+        });
+    </script>
 
 </body>
 

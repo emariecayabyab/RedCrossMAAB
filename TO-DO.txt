@@ -15,7 +15,7 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Auto order to DSC -- EMM (DONE)
 	- Search Bar -- Emm (DONE)
 	- Button - All+lelvels of membership (DONE)
-	- Pagination
+	- Pagination (DONE)
 	- Remove Button per data in Table  - x mark? (registration only)
 	- default tab ung ALL (DONE)
 	
@@ -30,7 +30,7 @@ MEMBER LIST
 	- table (DONE)
 	- Save PDF
 	- Save Excel (DONE)
-	- specific date
+	- specific date (DONE)
 	- to and from dates
 
 
@@ -48,9 +48,9 @@ ARCHIVE (DONE)
 	- View Only (DONE)
 
 SAVE TO COMPUTER (ARA)
-	- per table except archive table
+	- per table except archive table (DONE)
 	- to and from dates
-	- specific date 
+	- specific date (DONE)
 			
 			
 			

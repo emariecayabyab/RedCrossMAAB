@@ -1,10 +1,16 @@
 <?php
 	require 'fragments/db.php';
+	$idDel = $_GET['idNum'];
 
-$IDNumber = $_GET["IDNumber"];
-$query = "DELETE FROM maablist WHERE IDNumber='$IDNumber'";
+     $query="DELETE FROM maablist WHERE IDNumber=$idDel";
 
-$result = mysqli_query($db, $query);
+	$result = mysqli_query($db, $query);
+
+if($result){
+	echo "success" . "$idDel";
+} else {
+	echo "failed" . "$idDel";
+}
 
 ?>
 

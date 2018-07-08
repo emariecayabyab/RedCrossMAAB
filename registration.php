@@ -3,41 +3,36 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-                            <style>
-
-                                body {font-family: Arial, Helvetica, sans-serif;}
-                                * {box-sizing: border-box}
-                                /* Full-width input fields */
-                                input[type=text] {
-                                    width: 100%;
-                                    height: 25px;
-                                    padding: 0px;
-                                    display: inline-block;
-                                    border-width: 1px;
-                                    border-style: solid;
-                                    background: #f1f1f1;
-                                }
-
-                                
-                                /* Add padding to container elements */
-                                .container {
-                                    padding: 16px;
-                                }
-                                div.CNM {
-                                    width: 50px;                            
-                                }
-                                div.div1 {  
-                                    width: 320px;
-                                    padding: 10px;
-                                    border: 5px solid gray;
-                                    margin: 0;
-                                }
-
-                                .button {
-                                    width: 50px;
-                                }
-                                </style>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box}
+            /* Full-width input fields */
+            input[type=text] {
+                width: 100%;
+                height: 25px;
+                padding: 0px;
+                display: inline-block;
+                border-width: 1px;
+                border-style: solid;
+                background: #f1f1f1;
+            }
+            /* Add padding to container elements */
+            .container {
+                padding: 16px;
+            }
+            div.CNM {
+                width: 50px;                            
+            }
+            div.div1 {  
+                width: 320px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 0;
+            }
+            .button {
+                width: 50px;
+             }
+    </style>
 
 <head>
     <meta charset="utf-8">
@@ -58,90 +53,174 @@
     <!-- color CSS -->
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
+    
+    <script type="text/javascript" src="viewsControl/jQuery/jquery-1.10.2.min.js"></script>
 
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<!--K -->
-<script type="text/javascript" src="viewsControl/jQuery/jquery-1.10.2.min.js"></script>
-<!--K-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- pagination-->
+    <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="fix-header">
     <?php include('header.php'); ?>
 </body>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav slimscrollsidebar">
-                <ul class="nav" id="side-menu">
-                    <?php include('sidebar.php'); ?>
-                </ul>
-            </div>
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav slimscrollsidebar">
+            <ul class="nav" id="side-menu">
+                <?php include('sidebar.php'); ?>
+            </ul>
         </div>
+    </div>
  
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row bg-title">
-                    <div class="col-sm-9">
-                        <h4 class="page-title">Philippine Red Cross New Membership List</h4> </div>
+  
                     
+      <!-- Modal for Create New Member -->
+                        <!-- End of Modal -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Philippine Red Cross New Membership List</h4></div>
+      </div>
 
-                        <div class="container" style="margin-top:35px">
-        <h4>Select Number of Rows</h4>
-        <div class="form-group">
-            <select name="state" id="maxRows" class="form-control" style="width:150px;">
-                <option value="5000">Show All</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="75">75</option>
-                <option value="100">100</option>
-            </select>
-        </div>
-                        <!-- Modal for Create New Member -->
-                        <div class="modal" id="CNM">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-          
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-            <h4 class="modal-title">Create New Member</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
+                <!-- /row -->
+                <div class = "white-box" id ="div1">
+                <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="box-title">
+                                <?php
+                                echo "New Member As of " . date("Y/m/d") . ":";
+                                ?>
+                            </h3>
+                        </div>
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM" >Create New Member</button>
+                        </div>
+                </div>
+                            <div class="table-responsive">
+                                <table class="table" id="tblData">
+                                    <thead>
+                                        <tr>
+                                        <th onclick="sortTable(0)">OR NUMBER</th>
+                                        <th onclick="sortTable(1)">ID NUMBER</th>
+                                        <th onclick="sortTable(2)">LAST NAME</th>
+                                        <th onclick="sortTable(3)">FIRST NAME</th>
+                                        <th onclick="sortTable(4)">MIDDLE NAME</th>
+                                        <th onclick="sortTable(5)">ADDRESS</th>
+                                        <th onclick="sortTable(6)">CONTACT NUMBER</th>
+                                        <th onclick="sortTable(7)">BIRTHDAY</th>
+                                        <th onclick="sortTable(8)">AGE</th>
+                                        <th onclick="sortTable(9)">GENDER</th>
+                                        <th onclick="sortTable(10)">CIVIL STATUS</th>
+                                        <th onclick="sortTable(11)">REGISTRATION DATE</th>
+                                        <th onclick="sortTable(12)">EXPIRATION DATE</th>
+                                        
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                <?php
+                    require 'model/reg.php';
+                    foreach ($members as $member) {
 
-        <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
-        <div class="modal-body">
-        <div class ="row">
-            <div class = "col-sm-4">
-                <label>Choose the type of membership/insurance:</label>
-            </div>
-            <div class = "col-sm-8">
-                <select name="type">
-                    <option value="Classic">Classic</option>
-                    <option value="Bronze">Premier Bronze</option>
-                    <option value="Silver">Premier Silver</option>
-                    <option value="Gold">Premier Gold</option>
-                    <option value="Platinum"> Premier Platinum </option>
-                    <option value="Senior">Senior</option>
-                    <option value="Senior Plus">Senior Plus</option>
-                </select>
-            </div>
+                    $orNum = $member->getOrNum();
+                    $IDNumber = $member->getIdNum();
+                    $lastName = $member->getlName();
+                    $firstName = $member->getfName();
+                    $middleName = $member->getmName();
+                    $address = $member->getaddress();
+                    $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
+                    $validDate = $member->getvalDate();
+                    $expiryDate = $member->geteDate();
+                    echo <<<FRAG
+                    <tr>
+                    <td>$orNum</td>
+                    <td>$IDNumber</td>
+                    <td>$lastName</td>
+                    <td>$firstName</td>
+                    <td>$middleName</td>
+                    <td>$address</td>
+                    <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
+                    <td>$validDate</td>
+                    <td>$expiryDate</td>
+                    <td><a href='delete.php?id=$IDNumber'><button type="button" class="close">&times;</button></a></td>
+                    </tr>
+FRAG;
+        }
+    ?>
+                                </tbody>
+                            </table>
+                            <div class="pagination-container">
+            <nav>
+                <ul class="pagination"></ul>
+            </nav>
         </div>
-        <br>
+                        </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                    </div>
+                    <div class="col-sm-3">
+                        <button id="exportButton" type="button" class="btn btn-danger btn-block waves-effect waves-light" ><span class="fa fa-file-pdf-o">Save as PDF
+                        </span>
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+
+<!-- start of modal-->
+      <div class="modal" id="CNM">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Create New Member</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+                        <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
+
+                        <div class="modal-body">
+                            <div class ="row">
+                                <div class = "col-sm-4">
+                                     <label>Choose the type of membership/insurance:</label>
+                                </div>
+                                <div class = "col-sm-8">
+                                    <select name="type">
+                                        <option value="Classic">Classic</option>
+                                        <option value="Bronze">Premier Bronze</option>
+                                        <option value="Silver">Premier Silver</option>
+                                        <option value="Gold">Premier Gold</option>
+                                        <option value="Platinum"> Premier Platinum </option>
+                                        <option value="Senior">Senior</option>
+                                        <option value="Senior Plus">Senior Plus</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
         <div class="row">
             <div class="col-sm-4">
                 <label for="orNum">OR Number</label>   
@@ -316,110 +395,8 @@
     </form>
         </div>
     </div>
-</div>
-      
-                        <!-- End of Modal -->
-                </div>
-                <!-- /row -->
-                <div class = "white-box" id ="div1">
-                <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="box-title">
-                                <?php
-                                echo "New Member As of " . date("Y/m/d") . ":";
-                                ?>
-                            </h3>
-                        </div>
-                        <div class="col-sm-3">
-                        </div>
-                        <div class="col-sm-3">
-                            <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#CNM" >Create New Member</button>
-                        </div>
-                </div>
-                            <div class="table-responsive">
-                                <table class="table" id="tblData">
-                                    <thead>
-                                        <tr>
-                                        <th onclick="sortTable(0)">OR NUMBER</th>
-                                        <th onclick="sortTable(1)">ID NUMBER</th>
-                                        <th onclick="sortTable(2)">LAST NAME</th>
-                                        <th onclick="sortTable(3)">FIRST NAME</th>
-                                        <th onclick="sortTable(4)">MIDDLE NAME</th>
-                                        <th onclick="sortTable(5)">ADDRESS</th>
-                                        <th onclick="sortTable(6)">CONTACT NUMBER</th>
-                                        <th onclick="sortTable(7)">BIRTHDAY</th>
-                                        <th onclick="sortTable(8)">AGE</th>
-                                        <th onclick="sortTable(9)">GENDER</th>
-                                        <th onclick="sortTable(10)">CIVIL STATUS</th>
-                                        <th onclick="sortTable(11)">REGISTRATION DATE</th>
-                                        <th onclick="sortTable(12)">EXPIRATION DATE</th>
-                                        
-                                        </tr>
-                                    </thead>
-                                <tbody>
-                <?php
-                    require 'model/reg.php';
-                    foreach ($members as $member) {
+    </div>
 
-                    $orNum = $member->getOrNum();
-                    $IDNumber = $member->getIdNum();
-                    $lastName = $member->getlName();
-                    $firstName = $member->getfName();
-                    $middleName = $member->getmName();
-                    $address = $member->getaddress();
-                    $contactNumber = $member->getconNum();
-                    $birthday = $member->getBday();
-                    $age = $member->getAge();
-                    $gender = $member->getGender();
-                    $status = $member->getStatus();
-                    $validDate = $member->getvalDate();
-                    $expiryDate = $member->geteDate();
-                    echo <<<FRAG
-                    <tr>
-                    <td>$orNum</td>
-                    <td>$IDNumber</td>
-                    <td>$lastName</td>
-                    <td>$firstName</td>
-                    <td>$middleName</td>
-                    <td>$address</td>
-                    <td>$contactNumber</td>
-                    <td>$birthday</td>
-                    <td>$age</td>
-                    <td>$gender</td>
-                    <td>$status</td>
-                    <td>$validDate</td>
-                    <td>$expiryDate</td>
-                    <td><a href='delete.php?id=$IDNumber'><button type="button" class="close">&times;</button></a></td>
-                    </tr>
-FRAG;
-        }
-    ?>
-                                </tbody>
-                            </table>
-                            <div class="pagination-container">
-            <nav>
-                <ul class="pagination"></ul>
-            </nav>
-        </div>
-                        </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-3">
-                        <button id="exportButton" type="button" class="btn btn-danger btn-block waves-effect waves-light" ><span class="fa fa-file-pdf-o">Save as PDF
-                        </span>
-                        </button>
-                    </div>
-                    <div class="col-sm-3">
-                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
-                </div>
-
-                    </div>
-                </div>
             <!-- /.container-fluid -->
             <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
         </div>
@@ -439,13 +416,6 @@ FRAG;
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
 
-    <script>
-    function SomeDeleteRowFunction(o) {
-     //no clue what to put here?
-     var p=o.parentNode.parentNode;
-         p.parentNode.removeChild(p);
-    }
-    </script>
     <!-- Export as Excel -->
     <script type="text/javascript">
         function exportTableToExcel(tableID, filename = ''){
@@ -671,6 +641,24 @@ function validateForm() {
         border-radius: 0;
     }
 </style>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".table").DataTable({
+                "ordering": true,
+                "searching": true,
+                "paging": true,
+            });
+        });
+    </script>
 </body>
 
 </html>

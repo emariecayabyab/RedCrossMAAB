@@ -52,15 +52,16 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+  <!-- pagination-->
+
+    <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="fix-header">
 	<?php include('header.php'); ?>
 </body>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <ul class="nav" id="side-menu">
@@ -74,13 +75,10 @@
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross Expiring Membership List</h4> </div>
-                    <div class="pull-right">
-                        <input id="myInput" type="text" placeholder="Search..">
-                    </div>
                 </div>
                 <!-- /row -->
                 <div class="row">
-                    <div class="col-sm-12">
+                    
                         <div class="white-box">
                             <h3 class="box-title">
                                 <?php
@@ -92,15 +90,15 @@
                                 <table class="table" id="tblData">
                                     <thead>
                     <tr>
-                        <th onclick="sortTable(0)">OR NUMBER</th>
-                        <th onclick="sortTable(1)">ID NUMBER</th>
-                        <th onclick="sortTable(2)">LAST NAME</th>
-                        <th onclick="sortTable(3)">FIRST NAME</th>
-                        <th onclick="sortTable(4)">MIDDLE NAME</th>
-                        <th onclick="sortTable(5)">ADDRESS</th>
-                        <th onclick="sortTable(6)">CONTACT NUMBER</th>
-                        <th onclick="sortTable(7)">REGISTRATION DATE</th>
-                        <th onclick="sortTable(8)">EXPIRATION DATE</th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -205,73 +203,22 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-<script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("tblData");
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = "asc"; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.getElementsByTagName("TR");
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again.*/
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
+  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".table").DataTable({
+                "ordering": true,
+                "searching": true,
+                "paging": true,
+            });
+        });
+    </script>
 </body>
 
 </html>

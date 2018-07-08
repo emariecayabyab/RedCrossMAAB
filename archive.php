@@ -53,6 +53,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+  <!-- pagination-->
+
+    <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
 </head>
 
 <body class="fix-header">
@@ -75,9 +79,6 @@
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Philippine Red Cross Expired Membership List</h4> </div>
-                        <div class="pull-right">
-                        <input id="myInput" type="text" placeholder="Search..">
-                    </div>
                 </div>
                 <!-- /row -->
                 <div class="row">
@@ -170,16 +171,22 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".table").DataTable({
+                "ordering": true,
+                "searching": true,
+                "paging": true,
+            });
+        });
+    </script>
 </body>
 
 </html>
