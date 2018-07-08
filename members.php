@@ -143,10 +143,6 @@
   <button class="tablinks" onclick="openMembership(event, 'Senior Plus')">Senior Plus</button>
 </div>
 
-<?php
-    require 'fragments/detclasses.php';
-?>
-
 <div id="All" class="tabcontent">
         <div class="table-responsive">
 <table class="table">
