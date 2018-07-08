@@ -163,29 +163,17 @@
         <br>
         <div class="row">
             <div class="col-sm-4">
-                <label for="fname">First Name</label>   
-            </div>
-            <div class="col-sm-8">
-                <input autocomplete="false" type = "text" id="fname" name="fname">
+                <label for="fname">Member Name</label>   
             </div>
         </div>
-        <br>
         <div class="row">
             <div class="col-sm-4">
-                <label for="midname">Middle Name</label>   
+                <input autocomplete="false" type = "text" id="fname" name="fname" placeholder="First Name...">
             </div>
-            <div class="col-sm-8">
-                <input autocomplete="false" type = "text" id="midname" name="midname">
-            </div>
-        </div>
-        <br>
-        <div class="row">
             <div class="col-sm-4">
-                <label for="lname">Last Name</label>   
-            </div>
-            <div class="col-sm-8">
-                <input autocomplete="false" type = "text" id="lname" name="lname">
-            </div>
+                <input autocomplete="false" type = "text" id="midname" placeholder="Middle Name..."></div>
+            <div class="col-sm-4">
+                <input autocomplete="false" type = "text" id="lname" placeholder="Last Name..."></div>
         </div>
         <br>
         <div class="row">
@@ -213,9 +201,9 @@
             <div class="col-sm-3">
                 <input autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">   
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <select name="bmonth">
-                    <option disabled selected>Month</option>
+                    <option disabled selected value="Month">Month</option>
                     <option value="01">January</option>
                     <option value="02">February</option>
                     <option value="03">March</option>
@@ -232,7 +220,7 @@
             </div>
             <div class="col-sm-2">
                 <select name="bdate">
-                    <option disabled selected>Day</option>
+                    <option disabled selected value="Day">Day</option>
                     <option value="01">1</option>
                     <option value="02">2</option>
                     <option value="03">3</option>
@@ -618,12 +606,49 @@ function sortTable(n) {
     }
   }
 }
-</script></body></html>
+</script>
+</body></html>
 <script>
 function validateForm() {
-    var x = document.forms["addmem"]["fname"].value;
-    if (x == "") {
-        alert("Family Name must be filled out");
+    var orNumber = document.forms["addmem"]["orNum"].value;
+    var IDNumber  = document.forms["addmem"]["idNum"].value;
+    var lastName  = document.forms["addmem"]["lname"].value;
+    var firstName  = document.forms["addmem"]["fname"].value;
+    var middleName  = document.forms["addmem"]["midname"].value;
+    var byr  = document.forms["addmem"]["byear"].value;
+    var bmo  = document.forms["addmem"]["bmonth"].value;
+    var bday = document.forms["addmem"]["bdate"].value;
+
+    if (orNumber == "") {
+        alert("OR Number must be filled out");
+        return false;
+    }
+    if (IDNumber == "") {
+        alert("ID Number must be filled out");
+        return false;
+    }
+    if (lastName == "") {
+        alert("Last Name must be filled out");
+        return false;
+    }
+    if (firstName == "") {
+        alert("First Name must be filled out");
+        return false;
+    }
+    if (middleName == "") {
+        alert("Middle Name must be filled out");
+        return false;
+    }
+    if (byr == "") {
+        alert("Birth Year must be filled out");
+        return false;
+    }
+    if (bmo == "Month") {
+        alert("Please choose BIRTH MONTH.");
+        return false;
+    }
+    if (bday == "Day") {
+        alert("Please choose BIRTH DAY.");
         return false;
     }
 }
