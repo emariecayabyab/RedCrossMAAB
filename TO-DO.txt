@@ -22,7 +22,6 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 REGISTRATION
 	- Table List of New member (current date) (DONE)
 	- Create member (Button -Modal) (DONE)
-		- Add new member without closing modal
 	- sort by (DONE)
 	- Save PDF
 	- Save Excel (DONE)
@@ -31,7 +30,8 @@ MEMBER LIST
 	- table (DONE)
 	- Save PDF
 	- Save Excel (DONE)
-	- specific date or to and from dates
+	- specific date
+	- to and from dates
 
 
 NOTIFICATION
