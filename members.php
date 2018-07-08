@@ -652,6 +652,7 @@ FRAG;
 </div>
 
 <script>
+document.getElementsByClassName('tablinks')[0].click()
 function openMembership(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");

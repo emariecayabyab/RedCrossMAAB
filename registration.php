@@ -390,7 +390,7 @@
                     <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
-                    <td><button type="button" class="close">&times;</button></td>
+                    <td><a href='delete.php?id=$IDNumber'><button type="button" class="close">&times;</button></a></td>
                     </tr>
 FRAG;
         }
@@ -439,6 +439,14 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+
+    <script>
+    function SomeDeleteRowFunction(o) {
+     //no clue what to put here?
+     var p=o.parentNode.parentNode;
+         p.parentNode.removeChild(p);
+    }
+    </script>
     <!-- Export as Excel -->
     <script type="text/javascript">
         function exportTableToExcel(tableID, filename = ''){
@@ -618,6 +626,7 @@ function validateForm() {
     var byr  = document.forms["addmem"]["byear"].value;
     var bmo  = document.forms["addmem"]["bmonth"].value;
     var bday = document.forms["addmem"]["bdate"].value;
+    var age = document.forms["addmem"]["age"].value;
 
     if (orNumber == "") {
         alert("OR Number must be filled out");
@@ -649,6 +658,10 @@ function validateForm() {
     }
     if (bday == "Day") {
         alert("Please choose BIRTH DAY.");
+        return false;
+    }
+    if (age< 0) {
+        alert("Please use valid Age number only");
         return false;
     }
 }

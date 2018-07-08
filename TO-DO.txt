@@ -17,7 +17,7 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Button - All+lelvels of membership (DONE)
 	- Pagination
 	- Remove Button per data in Table  - x mark? (registration only)
-	- default tab ung ALL
+	- default tab ung ALL (DONE)
 	
 REGISTRATION
 	- Table List of New member (current date) (DONE)
@@ -36,7 +36,7 @@ MEMBER LIST
 
 NOTIFICATION
 	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email (DONE)
-	- Expiring members remarks - change to inactive after expiration date
+	- Expiring members remarks - change to inactive after expiration date (DONE)
 	- Sort by (DONE)
 	- Save PDF
 	- Save Excel (DONE)
