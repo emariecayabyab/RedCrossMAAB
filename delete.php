@@ -1,16 +1,14 @@
 <?php
-	require 'fragments/db.php';
-	$idDel = $_GET['idNum'];
+require 'fragments/db.php';
 
-     $query="DELETE FROM maablist WHERE IDNumber=$idDel";
+$del = $_POST['sid'];
+if(isset($_REQUEST["sid"]))
+{
+	$db->query("delete FROM maablist where IDNumber='$del'");
+	echo '$del';
 
-	$result = mysqli_query($db, $query);
-
-if($result){
-	echo "success" . "$idDel";
-} else {
-	echo "failed" . "$idDel";
 }
 
-?>
+else echo 'Not Deleted Error Occured';
 
+?>

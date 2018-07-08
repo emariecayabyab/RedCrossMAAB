@@ -110,19 +110,19 @@
                                 <table class="table" id="tblData">
                                     <thead>
                                         <tr>
-                                        <th onclick="sortTable(0)">OR NUMBER</th>
-                                        <th onclick="sortTable(1)">ID NUMBER</th>
-                                        <th onclick="sortTable(2)">LAST NAME</th>
-                                        <th onclick="sortTable(3)">FIRST NAME</th>
-                                        <th onclick="sortTable(4)">MIDDLE NAME</th>
-                                        <th onclick="sortTable(5)">ADDRESS</th>
-                                        <th onclick="sortTable(6)">CONTACT NUMBER</th>
-                                        <th onclick="sortTable(7)">BIRTHDAY</th>
-                                        <th onclick="sortTable(8)">AGE</th>
-                                        <th onclick="sortTable(9)">GENDER</th>
-                                        <th onclick="sortTable(10)">CIVIL STATUS</th>
-                                        <th onclick="sortTable(11)">REGISTRATION DATE</th>
-                                        <th onclick="sortTable(12)">EXPIRATION DATE</th>
+                                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                                         
                                         </tr>
                                     </thead>
