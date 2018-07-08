@@ -166,11 +166,7 @@ FRAG;
     ?>
                                 </tbody>
                             </table>
-                            <div class="pagination-container">
-            <nav>
-                <ul class="pagination"></ul>
-            </nav>
-        </div>
+
                         </div>
                 <br>
                 <br>
