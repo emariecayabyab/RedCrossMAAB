@@ -1,6 +1,7 @@
 <?php
 	require 'fragments/db.php';
 
+
 	$orNumber = $_POST["orNum"];
 	$IDNumber = $_POST["idNum"];
 	$memType = $_POST["type"];
@@ -17,11 +18,11 @@
 	$status = $_POST["status"];
 	$validDate = $_POST["vdate"];
 	$expiryDate = $_POST["edate"];
+	$bday = $byear . '-' . $bmonth . '-' . $bdate;
 
-    if(isset($_POST['add'])){
         $query = "INSERT INTO maablist (orNumber,IDNumber, memType, lastName,firstName,middleName,address,contactNumber, birthday, age, gender, status, validDate, expiryDate)
-        VALUES ('$orNumber','$IDNumber','$memType', '$lastName', '$firstName', '$middleName', '$address', '$contactNumber','$byear'||'-'||'$bmonth'||'-'||'$bdate','$age', '$gender', '$status', '$gender', '$status', '$validDate', '$expiryDate')";
+        VALUES ('$orNumber','$IDNumber','$memType', '$lastName', '$firstName', '$middleName', '$address', '$contactNumber','$bday','$age', '$gender', '$status', '$validDate', '$expiryDate')";
+        $result = mysqli_query($db, $query);
 
-    $result = mysqli_query($db, $query);
-    }
+        header("Location: registration.php");
 ?>

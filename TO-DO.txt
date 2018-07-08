@@ -25,12 +25,12 @@ REGISTRATION
 		- Add new member without closing modal
 	- sort by (DONE)
 	- Save PDF
-	- Save Excel
+	- Save Excel (DONE)
 
 MEMBER LIST
 	- table (DONE)
 	- Save PDF
-	- Save Excel
+	- Save Excel (DONE)
 	- specific date or to and from dates
 
 
@@ -39,7 +39,7 @@ NOTIFICATION
 	- Expiring members remarks - change to inactive after expiration date
 	- Sort by (DONE)
 	- Save PDF
-	- Save Excel
+	- Save Excel (DONE)
 
 ARCHIVE (DONE)
 	- Contains All Expired Membership (DONE)
@@ -49,8 +49,8 @@ ARCHIVE (DONE)
 
 SAVE TO COMPUTER (ARA)
 	- per table except archive table
-	- specific date or to and from dates
-	- option for excel file or pdf file (Dropdown)
+	- to and from dates
+	- specific date 
 			
 			
 			

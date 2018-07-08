@@ -120,239 +120,216 @@
           
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                    <h4 class="modal-title">Create New Member</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-            
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class ="row">
-                                    <div class = "col-sm-4">
-                                        <label>Choose the type of membership/insurance:</label>
-                                    </div>
-                                    <div class = "col-sm-8">
-                                        <form action="formMod.php" method="post">
-                                            <select name="type">
-                                                <option value="Classic">Classic</option>
-                                                <option value="Bronze">Premier Bronze</option>
-                                                <option value="Silver">Premier Silver</option>
-                                                <option value="Gold">Premier Gold</option>
-                                                <option value="Platinum"> Premier Platinum </option>
-                                                <option value="Senior">Senior</option>
-                                                <option value="Senior Plus">Senior Plus</option>
-                                            </select>
-                                        </form>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="orNum">OR Number</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                            <input autocomplete="false" type = "text" id="orNum" name="orNum">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="idNum">ID Number</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                            <input autocomplete="false" type = "text" id="idnum" name="idnum">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="fname">First Name</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                            <input autocomplete="false" type = "text" id="fname" name="fname">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="midname">Middle Name</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                        
-                                            <input autocomplete="false" type = "text" id="midname" name="midname">
-                                       
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="lname">Last Name</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                        
-                                            <input autocomplete="false" type = "text" id="lname" name="lname">
-                                        
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="add">Address</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                        
-                                            <input autocomplete="false" type = "text" id="addr" name="addr">
-                                       
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="contact">Contact Number</label>   
-                                    </div>
-                                    <div class="col-sm-8">
-                                    
-                                            <input autocomplete="false" type = "text" id="contact" name="contact">
-                                       
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label for="bday">Birthday</label>   
-                                    </div>
-                                    <div class="col-sm-3">
-                                       
-                                            <input autocomplete="false" type = "text" id="byear" name="byear" label="year">
-                                       
-                                    </div>
-                                    <div class="col-sm-3">
-                                        
-                                            <select name="bmonth">
-                                                <option disabled selected>Month</option>
-                                                <option value="01">January</option>
-                                                <option value="02">February</option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05"> May </option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                        
-                                    </div>
-                                    <div class="col-sm-2">
-                                    
-                                        <select name="bdate">
-                                            <option value="01">1</option>
-                                            <option value="02">2</option>
-                                            <option value="03">3</option>
-                                            <option value="04">4</option>
-                                            <option value="05">5</option>
-                                            <option value="06">6</option>
-                                            <option value="07">7</option>
-                                            <option value="08">8</option>
-                                            <option value="09">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                        </select>
-                                    
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class ="col-sm-4">
-                                        <label for="age">Age</label>
-                                    </div>
-                                    <div class ="col-sm-3">
-                                        
-                                            <input autocomplete="false" type = "text" id="age" name="age">
-                                     
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class ="col-sm-4">
-                                        <label for="Sex">Sex</label>
-                                    </div>
-                                    <div class ="col-sm-3">
-                                        
-                                            <select name="sex">
-                                                <option value="F">Female</option>
-                                                <option value="M">Male</option>
-                                            </select>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class ="col-sm-4">
-                                        <label for="status">Civil Status</label>
-                                    </div>
-                                    <div class ="col-sm-3">
-                                            <select name="status">
-                                                <option value="Single">Single</option>
-                                                <option value="Married">Married</option>
-                                                <option value="Widowed">Widowed</option>
-                                                <option value="Seperated">Seperated</option>
-                                                <option value="Divorced">Divorced</option>
-                                            </select>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class ="col-sm-4">
-                                        <label for="vdate">Valid Date</label>
-                                    </div>
-                                    <div class ="col-sm-6">
-                                            <input autocomplete="false" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class ="col-sm-4">
-                                        <label for="edate">Expiration Date</label>
-                                    </div>
-                                    <div class ="col-sm-6">
-                                            <input autocomplete="false" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
-                                    </div>
-                                </div>
-                                <br>
+            <h4 class="modal-title">Create New Member</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
 
-                            </div>
-            
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" name="add">Add</button>
-                            </div>
-                        </form>
-            
-                            </div>
-                            </div>
-                        </div>
+        <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
+        <div class="modal-body">
+        <div class ="row">
+            <div class = "col-sm-4">
+                <label>Choose the type of membership/insurance:</label>
+            </div>
+            <div class = "col-sm-8">
+                <select name="type">
+                    <option value="Classic">Classic</option>
+                    <option value="Bronze">Premier Bronze</option>
+                    <option value="Silver">Premier Silver</option>
+                    <option value="Gold">Premier Gold</option>
+                    <option value="Platinum"> Premier Platinum </option>
+                    <option value="Senior">Senior</option>
+                    <option value="Senior Plus">Senior Plus</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="orNum">OR Number</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="orNum" name="orNum">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+               <label for="idNum">ID Number</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="idNum" name="idNum">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="fname">First Name</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="fname" name="fname">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="midname">Middle Name</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="midname" name="midname">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="lname">Last Name</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="lname" name="lname">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="add">Address</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="addr" name="addr">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="contact">Contact Number</label>   
+            </div>
+            <div class="col-sm-8">
+                <input autocomplete="false" type = "text" id="contact" name="contact">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="bday">Birthday</label>   
+            </div>
+            <div class="col-sm-3">
+                <input autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">   
+            </div>
+            <div class="col-sm-2">
+                <select name="bmonth">
+                    <option disabled selected>Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05"> May </option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <select name="bdate">
+                    <option disabled selected>Day</option>
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                    <option value="04">4</option>
+                    <option value="05">5</option>
+                    <option value="06">6</option>
+                    <option value="07">7</option>
+                    <option value="08">8</option>
+                    <option value="09">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class ="col-sm-4">
+                <label for="age">Age</label>
+            </div>
+            <div class ="col-sm-3">
+                <input autocomplete="false" type = "text" id="age" name="age">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class ="col-sm-4">
+                 <label for="Sex">Sex</label>
+            </div>
+            <div class ="col-sm-3">
+                <select name="sex">
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class ="col-sm-4">
+                <label for="status">Civil Status</label>
+            </div>
+            <div class ="col-sm-3">
+                <select name="status">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Seperated">Seperated</option>
+                    <option value="Divorced">Divorced</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class ="col-sm-4">
+                <label for="vdate">Valid Date</label>
+            </div>
+            <div class ="col-sm-6">
+                <input autocomplete="false" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class ="col-sm-4">
+                <label for="edate">Expiration Date</label>
+            </div>
+            <div class ="col-sm-6">
+                <input autocomplete="false" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
+            </div>
+        </div>
+        <br>
+        <div class="modal-footer">
+            <button id="addmember" type="submit" class="btn btn-danger">Add</button>
+        </div>
+    </div>
+    </form>
+        </div>
+    </div>
+</div>
       
                         <!-- End of Modal -->
                 </div>
@@ -389,6 +366,7 @@
                                         <th onclick="sortTable(10)">CIVIL STATUS</th>
                                         <th onclick="sortTable(11)">REGISTRATION DATE</th>
                                         <th onclick="sortTable(12)">EXPIRATION DATE</th>
+                                        
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -424,6 +402,7 @@
                     <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
+                    <td><button type="button" class="close">&times;</button></td>
                     </tr>
 FRAG;
         }
@@ -578,12 +557,12 @@ FRAG;
         });
     });
 </script>
-
 <style>
     #exportButton {
         border-radius: 0;
     }
 </style>
+
 <script>
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -639,33 +618,15 @@ function sortTable(n) {
     }
   }
 }
-</script></body></html><<<<<<< .mine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-                    }
-                );
-
-                pdf.saveAs({
-                    fileName: "FileName"
-                });
-            });
-        });
-    });
+</script></body></html>
+<script>
+function validateForm() {
+    var x = document.forms["addmem"]["fname"].value;
+    if (x == "") {
+        alert("Family Name must be filled out");
+        return false;
+    }
+}
 </script>
 
 <style>
@@ -673,7 +634,6 @@ function sortTable(n) {
         border-radius: 0;
     }
 </style>
->>>>>>> .theirs
 </body>
 
 </html>
