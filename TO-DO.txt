@@ -23,12 +23,10 @@ REGISTRATION
 	- Table List of New member (current date) (DONE)
 	- Create member (Button -Modal) (DONE)
 	- sort by (DONE)
-	- Save PDF
 	- Save Excel (DONE)
 
 MEMBER LIST
 	- table (DONE)
-	- Save PDF
 	- Save Excel (DONE)
 	- specific date (DONE)
 	- to and from dates
@@ -38,7 +36,6 @@ NOTIFICATION
 	- Table contains ID Number, Last Name, First Name, Middle Name, Contact Number, Email (DONE)
 	- Expiring members remarks - change to inactive after expiration date (DONE)
 	- Sort by (DONE)
-	- Save PDF
 	- Save Excel (DONE)
 
 ARCHIVE (DONE)
@@ -49,13 +46,12 @@ ARCHIVE (DONE)
 
 SAVE TO COMPUTER (ARA)
 	- per table except archive table (DONE)
-	- to and from dates
 	- specific date (DONE)
 			
 			
 			
 * research
  - page number (DONE)
- - print to excel
- - print to pdf
+ - print to excel (DONE)
+
  

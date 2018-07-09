@@ -64,9 +64,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <!-- pagination-->
-    
     <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
-</head>
 </head>
 
 <body class="fix-header">
@@ -112,19 +110,19 @@
                                 <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th>OR NUMBER</th>
-                        <th>ID NUMBER</th>
-                        <th>LAST NAME</th>
-                        <th>FIRST NAME</th>
-                        <th>MIDDLE NAME</th>
-                        <th>ADDRESS</th>
-                        <th>CONTACT NUMBER</th>
-                        <th>BIRTHDAY</th>
-                        <th>AGE</th>
-                        <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
-                        <th>REGISTRATION DATE</th>
-                        <th>EXPIRATION DATE</th>
+                        <th><center>OR NUMBER</center></th>
+                        <th><center>ID NUMBER</center></th>
+                        <th><center>LAST NAME</center></th>
+                        <th><center>FIRST NAME</center></th>
+                        <th><center>MIDDLE NAME</center></th>
+                        <th><center>ADDRESS</center></th>
+                        <th><center>CONTACT NUMBER</center></th>
+                        <th><center>BIRTHDAY</center></th>
+                        <th><center>AGE</center></th>
+                        <th><center>GENDER</center></th>
+                        <th><center>CIVIL STATUS</center></th>
+                        <th><center>REGISTRATION DATE</center></th>
+                        <th><center>EXPIRATION DATE</center></th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -575,8 +573,8 @@ function validateForm() {
         $(document).ready(function(){
             $(".table").DataTable({
                 "ordering": true,
-                "searching": true,
-                "paging": true,
+                "searching": false,
+                "paging": false,
             });
         });
     </script>
