@@ -1,14 +1,16 @@
 <?php
 require 'fragments/db.php';
 
-$del = $_POST['sid'];
-if(isset($_REQUEST["sid"]))
-{
-	$db->query("delete FROM maablist where IDNumber='$del'");
-	echo '$del';
 
+$id = $_GET['id'];
+ 
+
+$query = "DELETE FROM maablist WHERE id=$id";
+ $result = mysqli_query($db, $query);
+if($result){
+	echo 'success' . '$id';
+} else {
+	echo '$id';
 }
-
-else echo 'Not Deleted Error Occured';
-
+header("Location: registration.php");
 ?>
