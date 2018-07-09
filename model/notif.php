@@ -1,7 +1,7 @@
 <?php
 	require 'fragments/db.php';
 
-	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber, birthday, age, gender, status, validDate, expiryDate FROM maablist WHERE MONTH(expiryDate) = MONTH(CURRENT_DATE()) AND YEAR(expiryDate) = YEAR(CURRENT_DATE()) AND DAY(expiryDate)> DAY(CURRENT_DATE()) ORDER BY validDate DESC';
+	$query = 'SELECT orNumber,IDNumber,lastName,firstName,middleName,address,contactNumber, birthday, age, gender, status, validDate, expiryDate FROM maablist WHERE YEAR(expiryDate) = YEAR(CURRENT_DATE()) AND MONTH(date_sub(expiryDate, INTERVAL 1 month)) = MONTH(CURRENT_DATE()) ORDER BY validDate DESC';
     $result = mysqli_query($db, $query);
 
     $members = [];

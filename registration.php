@@ -243,9 +243,9 @@ echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn b
                 <input autocomplete="false" type = "text" id="fname" name="fname" placeholder="First Name...">
             </div>
             <div class="col-sm-4">
-                <input autocomplete="false" type = "text" id="midname" placeholder="Middle Name..."></div>
+                <input autocomplete="false" type = "text" id="midname" name="midname" placeholder="Middle Name..."></div>
             <div class="col-sm-4">
-                <input autocomplete="false" type = "text" id="lname" placeholder="Last Name..."></div>
+                <input autocomplete="false" type = "text" id="lname" name="lname" placeholder="Last Name..."></div>
         </div>
         <br>
         <div class="row">
