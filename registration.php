@@ -64,7 +64,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <!-- pagination-->
+    
     <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
+</head>
 </head>
 
 <body class="fix-header">
@@ -107,44 +109,63 @@
                         </div>
                 </div>
                             <div class="table-responsive">
-                                <?php
-require 'model/reg.php';
-    echo '<table >';
-    echo '<tr>
-              <th>OR NUMBER</th>
-              <th>ID NUMBER</th>
-              <th>LAST NAME</th>
-              <th>FIRST NAME</th>
-              <th>MIDDLE NAME</th>
-              <th>ADDRESS</th>
-              <th>CONTACT NUMBER</th>
-              <th>BIRTHDAY</th>
-              <th>AGE</th>
-              <th>GENDER</th>
-              <th>CIVIL STATUS</th>
-              <th>REGISTRATION DATE</th>
-              <th>EXPIRATION DATE</th>
-          </tr>';
-    while($row = $result->fetch_assoc())
-        echo '<tr id="' . $row['IDNumber'] . '">' . 
-                '<td>' . $row["orNumber"] . '</td>' . 
-                '<td> '. $row['IDNumber'] . '</td>' . 
-                '<td>' . $row["lastName"] . '</td>' .
-                '<td>' . $row["firstName"] . '</td>'.
-                '<td>' . $row["middleName"] . '</td>' .
-                '<td>' . $row["address"] . '</td>' .
-                '<td>' . $row["contactNumber"] .'</td>' .
-                '<td>' . $row["birthday"] . '</td>' .
-                '<td>' . $row["age"] . '</td>' .
-                '<td>' . $row["gender"] . '</td>' .
-                '<td>' . $row["status"] . '</td>' .
-                '<td>' . $row["validDate"] . '</td>' .
-                '<td>' . $row["expiryDate"] . '</td>' .
-                '<td ><a href="delete.php?id=<?php echo $row["IDNumber"];"><button name="Delete" class="close">&times;</button></a></td>' .
-             '</tr>';
- 
-    echo '</table>';
- ?>
+                                <table class="table" id="tblData">
+                <thead>
+                    <tr>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                <?php
+                    require 'model/reg.php';
+                    foreach ($members as $member) {
+
+                    $orNum = $member->getOrNum();
+                    $IDNumber = $member->getIdNum();
+                    $lastName = $member->getlName();
+                    $firstName = $member->getfName();
+                    $middleName = $member->getmName();
+                    $address = $member->getaddress();
+                    $contactNumber = $member->getconNum();
+                    $birthday = $member->getBday();
+                    $age = $member->getAge();
+                    $gender = $member->getGender();
+                    $status = $member->getStatus();
+                    $validDate = $member->getvalDate();
+                    $expiryDate = $member->geteDate();
+                    echo <<<FRAG
+                    <tr>
+                    <td>$orNum</td>
+                    <td>$IDNumber</td>
+                    <td>$lastName</td>
+                    <td>$firstName</td>
+                    <td>$middleName</td>
+                    <td>$address</td>
+                    <td>$contactNumber</td>
+                    <td>$birthday</td>
+                    <td>$age</td>
+                    <td>$gender</td>
+                    <td>$status</td>
+                    <td>$validDate</td>
+                    <td>$expiryDate</td>
+                    </tr>
+FRAG;
+        }
+    ?>
+                </tbody>
+            </table>
 
                         </div>
                 <br>
