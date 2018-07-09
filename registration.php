@@ -174,12 +174,10 @@ FRAG;
                     <div class="col-sm-6">
                     </div>
                     <div class="col-sm-3">
-                        <button id="exportButton" type="button" class="btn btn-danger btn-block waves-effect waves-light" ><span class="fa fa-file-pdf-o">Save as PDF
-                        </span>
-                        </button>
                     </div>
                     <div class="col-sm-3">
-                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
                 </div>
@@ -445,79 +443,6 @@ FRAG;
     }
 }
     </script>
-    <!-- Export as PDF -->
-    <script type="text/javascript">
-    jQuery(function ($) {
-        $("#exportButton").click(function () {
-            // parse the HTML table element having an id=exportTable
-            var dataSource = shield.DataSource.create({
-                data: "#tblData",
-                schema: {
-                    type: "table",
-                    fields: {
-                        ORNUMBER: { type: Number },
-                        IDNUMBER: { type: Number },
-                        LASTNAME: { type: String },
-                        FIRSTNAME: { type: String },
-                        MIDDLENAME: {type: String},
-                        ADDRESS: {type: String},
-                        CONTACTNUMBER: {type: Number},
-                        BIRTHDAY: {type: Number},
-                        AGE: {type: Number},
-                        GENDER: {type: String},
-                        CIVILSTATUS: {type: String},
-                        REGISTRATIONDATE: {type: Number},
-                        EXPIRATIONDATE: {type: Number}
-
-
-                    }
-                }
-            });
-
-            // when parsing is done, export the data to PDF
-            dataSource.read().then(function (data) {
-                var pdf = new shield.exp.PDFDocument({
-                    author: "PhilippineRedCross",
-                    created: new Date()
-                });
-
-                pdf.addPage("a4", "landscape");
-
-                pdf.table(
-                    50,
-                    50,
-                    data,
-                    [
-                        { field: "OR NUMBER", title: "OR NUMBER", width: 70 },
-                        { field: "ID NUMBER", title: "ID NUMBER", width: 70 },
-                        { field: "LAST NAME", title: "LAST NAME", width: 120 }
-                        { field: "FIRST NAME", title: "FIRST NAME", width: 120 }
-                        { field: "MIDDLE NAME", title: "MIDDLE NAME", width: 110 }
-                        { field: "LAST NAME", title: "LAST NAME", width: 110 }
-                        { field: "ADDRESS", title: "ADDRESS", width: 130 }
-                        { field: "CONTACT NUMBER", title: "CONTACT NUMBER", width: 80 }
-                        { field: "BIRTHDAY", title: "BIRTHDAY", width: 70 }
-                        { field: "AGE", title: "AGE", width: 50 }
-                        { field: "GENDER", title: "GENDER", width: 50 }
-                        { field: "CIVIL STATUS", title: "CIVIL STATUS", width: 70 }
-                        { field: "REGISTRATION DATE", title: "REGISTRATION DATE", width: 70 }
-                        { field: "EXPIRATION DATE", title: "EXPIRATION DATE", width: 70 }
-                    ],
-                    {
-                        margins: {
-                            top: 50,
-                            left: 50
-                        }
-                    }
-                );
-
-                pdf.saveAs({
-                    fileName: "FileName"
-                });
-            });
-        });
-    });
-</script>
 <style>
     #exportButton {
         border-radius: 0;

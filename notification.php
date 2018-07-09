@@ -140,8 +140,6 @@ FRAG;
                     <div class="col-sm-6">
                     </div>
                     <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
-                        </button>
                     </div>
                     <div class="col-sm-3">
                         <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel

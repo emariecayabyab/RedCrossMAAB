@@ -72,7 +72,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -145,7 +145,7 @@
 
 <div id="All" class="tabcontent">
         <div class="table-responsive">
-<table class="table">
+<table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -203,10 +203,18 @@ FRAG;
                 </tbody>
             </table>
         </div>
+    <br>
+    <div class="col-sm-9">
     </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
 <div id="Classic" class="tabcontent">
         <div class="table-responsive">
-            <table class="table">
+            <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -264,11 +272,20 @@ FRAG;
                 </tbody>
             </table>
         </div>
+    <br>
+    <br>
+    <div class="col-sm-9">
     </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Classic Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
 
 <div id="Bronze" class="tabcontent">
   <div class="table-responsive">
-<table class="table">
+<table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -326,11 +343,20 @@ FRAG;
                 </tbody>
             </table>
         </div> 
+    <br>
+    <br>
+    <div class="col-sm-9">
     </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Bronze Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                </div>
 
 <div id="Silver" class="tabcontent">
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -388,11 +414,21 @@ FRAG;
                 </tbody>
             </table>
         </div>
-</div>
+        <br>
+    <br>
+    <div class="col-sm-9">
+    </div>
+        <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Silver Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
+
 
 <div id="Gold" class="tabcontent">
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -450,12 +486,21 @@ FRAG;
                 </tbody>
             </table>
     </div>
+        <br>
+    <br>
+    <div class="col-sm-9">
+    </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Gold Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
 
-</div>
 
 <div id="Platinum" class="tabcontent">
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -513,11 +558,21 @@ FRAG;
                 </tbody>
             </table>
                           </div>
-</div>
+                          <br>
+    <br>
+    <div class="col-sm-9">
+    </div>
+                          <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Platinum Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
+
 
 <div id="Senior" class="tabcontent">
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -575,12 +630,20 @@ FRAG;
                 </tbody>
             </table>
     </div>
-
-</div>
+    <br>
+    <br>
+    <div class="col-sm-9">
+    </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Senior Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
 
 <div id="Senior Plus" class="tabcontent">
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" id="tblData">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -638,8 +701,52 @@ FRAG;
                 </tbody>
             </table>
     </div>
-</div>
+    
+    <br>
+    <br>
+    <div class="col-sm-9">
+    </div>
+    <div class="col-sm-3">
+                        <button onclick="exportTableToExcel('tblData','<?php
+echo "List of Senior Plus Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+                    </div>
 
+<!-- Export as Excel -->
+    <script type="text/javascript">
+        function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+    </script>
+    <!-- End of Save as excel -->
 <script>
 document.getElementsByClassName('tablinks')[0].click()
 function openMembership(evt, cityName) {

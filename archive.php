@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -138,14 +138,6 @@ FRAG;
                             <br>
                             <br>
                             <div class="row">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-3">
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as PDF
-                        </button>
-                    </div>
                 </div>
                         </div>
                     </div>
