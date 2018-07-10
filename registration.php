@@ -575,6 +575,7 @@ function validateForm() {
                 "ordering": true,
                 "searching": false,
                 "paging": false,
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
                     "targets": 12,
