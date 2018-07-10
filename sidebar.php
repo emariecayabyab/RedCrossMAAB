@@ -11,7 +11,7 @@
                         <a href="members.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Membership List</a>
                     </li>
                     <li>
-                        <a href="notification.php" class="waves-effect"><i class="fa  fa-exclamation-circle fa-fw" aria-hidden="true"></i>Notifications</a>
+                        <a href="notification.php" class="waves-effect"><i class="fa  fa-exclamation-circle fa-fw" aria-hidden="true"></i>Expiring Membership</a>
                     </li>
 					<li>
                         <a href="archive.php" class="waves-effect"><i class="fa fa-archive fa-fw" aria-hidden="true"></i>Archives</a>
