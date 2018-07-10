@@ -214,6 +214,12 @@ FRAG;
                 "ordering": true,
                 "searching": true,
                 "paging": true,
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                "columnDefs": [{
+                    
+                    "targets": 8,
+                    "searchable": false,
+                }]
             });
         });
     </script>
