@@ -4,62 +4,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<style>
-		body {font-family: Arial, Helvetica, sans-serif;}
-		* {box-sizing: border-box}
-		/* Full-width input fields */
-		input[type=text], input[type=password] {
-		width: 100%;
-		padding: 15px;
-		margin: 5px 0 22px 0;
-		display: inline-block;
-        border: none;
-		background: #f1f1f1;
-    }
+
+                            <style>
+
+                                body {font-family: Arial, Helvetica, sans-serif;}
+                                * {box-sizing: border-box}
+                                /* Full-width input fields */
+                                input[type=text], input[type=password] {
+                                    width: 100%;
+                                    padding: 15px;
+                                    margin: 5px 0 22px 0;
+                                    display: inline-block;
+                                    border: none;
+                                    background: #f1f1f1;
+                                }
 
                                 
-		/* Add padding to container elements */
-		.container {
-		padding: 16px;
-    }
+                                /* Add padding to container elements */
+                                .container {
+                                    padding: 16px;
+                               }
 
-	/* Style the tab */
-	.tab {
-		overflow: hidden;
-		border: 1px solid #ccc;
-		background-color: #f1f1f1;
-		font-size:
-	}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
 
-	/* Style the buttons inside the tab */
-	.tab button {
-		background-color: inherit;
-		float: left;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		padding: 14px 16px;
-		transition: 0.3s;
-		font-size: 17px;
-	}
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
 
-	/* Change background color of buttons on hover */
-	.tab button:hover {
-		background-color: #ddd;
-	}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
 
-	/* Create an active/current tablink class */
-	.tab button.active {
-		background-color: #ccc;
-	}
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
 
-	/* Style the tab content */
-	.tabcontent {
-		display: none;
-		padding: 6px 12px
-		border: 1px solid #ccc;
-		border-top: none;
-	}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px
+    border: 1px solid #ccc;
+    border-top: none;
+}
                                 </style>
                                 
 
@@ -71,7 +72,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -147,19 +148,19 @@
 <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -216,19 +217,19 @@ echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-da
             <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -287,19 +288,19 @@ echo "List of Classic Members " . date("Y/m/d");?>')" type="button" class="btn b
 <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -358,19 +359,19 @@ echo "List of Bronze Members " . date("Y/m/d");?>')" type="button" class="btn bt
     <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -430,19 +431,19 @@ echo "List of Silver Members " . date("Y/m/d");?>')" type="button" class="btn bt
     <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -502,19 +503,19 @@ echo "List of Gold Members " . date("Y/m/d");?>')" type="button" class="btn btn-
     <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -574,19 +575,19 @@ echo "List of Platinum Members " . date("Y/m/d");?>')" type="button" class="btn 
     <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -645,19 +646,19 @@ echo "List of Senior Members " . date("Y/m/d");?>')" type="button" class="btn bt
     <table class="table" id="tblData">
                 <thead>
                     <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
+                        <th>OR NUMBER</th>
+                        <th>ID NUMBER</th>
+                        <th>LAST NAME</th>
+                        <th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
+                        <th>ADDRESS</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>BIRTHDAY</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>CIVIL STATUS</th>
+                        <th>REGISTRATION DATE</th>
+                        <th>EXPIRATION DATE</th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -808,12 +809,6 @@ $(document).ready(function(){
                 "ordering": true,
                 "searching": true,
                 "paging": true,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
-                "columnDefs": [{
-                    
-                    "targets": 8,
-                    "searchable": false,
-                }]
             });
         });
     </script>
