@@ -809,6 +809,11 @@ $(document).ready(function(){
                 "ordering": true,
                 "searching": true,
                 "paging": true,
+                "columnDefs": [{
+                    
+                    "targets": 12,
+                    "searchable": false,
+                }]
             });
         });
     </script>

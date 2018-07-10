@@ -575,6 +575,11 @@ function validateForm() {
                 "ordering": true,
                 "searching": false,
                 "paging": false,
+                "columnDefs": [{
+                    
+                    "targets": 12,
+                    "searchable": false,
+                }]
             });
         });
     </script>
