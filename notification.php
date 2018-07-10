@@ -90,15 +90,15 @@
                                 <table class="table" id="tblData">
                                     <thead>
                     <tr>
-                        <th>OR NUMBER</th>
-                        <th>ID NUMBER</th>
-                        <th>LAST NAME</th>
-                        <th>FIRST NAME</th>
-                        <th>MIDDLE NAME</th>
-                        <th>ADDRESS</th>
-                        <th>CONTACT NUMBER</th>
-                        <th>REGISTRATION DATE</th>
-                        <th>EXPIRATION DATE</th>
+                        <th><center>OR NUMBER</center></th>
+                        <th><center>ID NUMBER</center></th>
+                        <th><center>LAST NAME</center></th>
+                        <th><center>FIRST NAME</center></th>
+                        <th><center>MIDDLE NAME</center></th>
+                        <th><center>ADDRESS</center></th>
+                        <th><center>CONTACT NUMBER</center></th>
+                        <th><center>REGISTRATION DATE</center></th>
+                        <th><center>EXPIRATION DATE</center></th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
