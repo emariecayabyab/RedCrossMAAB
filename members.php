@@ -4,63 +4,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-                            <style>
-
-                                body {font-family: Arial, Helvetica, sans-serif;}
-                                * {box-sizing: border-box}
-                                /* Full-width input fields */
-                                input[type=text], input[type=password] {
-                                    width: 100%;
-                                    padding: 15px;
-                                    margin: 5px 0 22px 0;
-                                    display: inline-block;
-                                    border: none;
-                                    background: #f1f1f1;
-                                }
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+		* {box-sizing: border-box}
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+		width: 100%;
+		padding: 15px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+        border: none;
+		background: #f1f1f1;
+    }
 
                                 
-                                /* Add padding to container elements */
-                                .container {
-                                    padding: 16px;
-                               }
+		/* Add padding to container elements */
+		.container {
+		padding: 16px;
+    }
 
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
+	/* Style the tab */
+	.tab {
+		overflow: hidden;
+		border: 1px solid #ccc;
+		background-color: #f1f1f1;
+		font-size:
+	}
 
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
+	/* Style the buttons inside the tab */
+	.tab button {
+		background-color: inherit;
+		float: left;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 14px 16px;
+		transition: 0.3s;
+		font-size: 17px;
+	}
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+		background-color: #ddd;
+	}
 
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
+	/* Create an active/current tablink class */
+	.tab button.active {
+		background-color: #ccc;
+	}
 
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px
-    border: 1px solid #ccc;
-    border-top: none;
-}
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+		padding: 6px 12px
+		border: 1px solid #ccc;
+		border-top: none;
+	}
                                 </style>
                                 
 
@@ -72,7 +71,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.png">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
