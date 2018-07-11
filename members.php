@@ -7,24 +7,6 @@
 
                             <style>
 
-                                body {font-family: Arial, Helvetica, sans-serif;}
-                                * {box-sizing: border-box}
-                                /* Full-width input fields */
-                                input[type=text], input[type=password] {
-                                    width: 100%;
-                                    padding: 15px;
-                                    margin: 5px 0 22px 0;
-                                    display: inline-block;
-                                    border: none;
-                                    background: #f1f1f1;
-                                }
-
-                                
-                                /* Add padding to container elements */
-                                .container {
-                                    padding: 16px;
-                               }
-
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -768,7 +750,9 @@ function openMembership(evt, cityName) {
                 </div>
             </div>
 
-            <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
+            <footer>
+                <?php include('footer.php'); ?>
+            </footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
