@@ -165,6 +165,7 @@ require 'model/reg.php';
               <th>CIVIL STATUS</th>
               <th>REGISTRATION DATE</th>
               <th>EXPIRATION DATE</th>
+              <th></th>
           </tr>';
 
     while($row = mysqli_fetch_array($result)){
