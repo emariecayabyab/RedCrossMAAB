@@ -1,7 +1,13 @@
+  <style>
+  nav{
+    background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+    width: 100%;
+  }
+</style>
+
 
         <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header">
-			<div class="top-left-part">
+            
                     <!-- Logo -->
                     <a class="logo" href="registration.php">
                         <!-- Logo icon image, you can use font-icon also --><b>
