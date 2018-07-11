@@ -6,11 +6,11 @@
 
                             <style>
 
-                                body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
                                 /* Full-width input fields */
-                                input[type=text], input[type=password] {
-                                    width: 100%;
+                                input[type=text] {
+                                    width: 700px;
                                     padding: 15px;
                                     margin: 5px 0 22px 0;
                                     display: inline-block;
@@ -25,41 +25,51 @@
                                 }
 
                                 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+                                display: none; /* Hidden by default */
+                                position: fixed; /* Stay in place */
+                                z-index: 1; /* Sit on top */
+                                left: 0;
+                                top: 0;
+                                width: 100%; /* Full width */
+                                height: 100%; /* Full height */
+                                overflow-y: auto; /* Enable scroll if needed */
+                                background-color: rgb(0,0,0); /* Fallback color */
+                                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                            }
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
+                                .modal-dialog{
+                                    width: 800px;
+                                    overflow-y: initial !important
+                                }
 
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+                                .modal-body{
+                                    height: 500px;
+                                    overflow-y: auto;
+                                }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+                                /* Modal Content/Box */
+                                .modal-content {
+                                    background-color: #fefefe;
+                                    margin: 15% auto; /* 15% from the top and centered */
+                                    padding: 20px;
+                                    border: 1px solid #888;
+                                    width: 80%; /* Could be more or less, depending on screen size */
+                                }
+
+                                /* The Close Button */
+                                .close {
+                                    color: #aaa;
+                                    float: right;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                }
+
+                                .close:hover,
+                                .close:focus {
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
 
                                 </style>
 
