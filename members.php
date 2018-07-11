@@ -184,14 +184,13 @@ FRAG;
     ?>
                 </tbody>
             </table>
-        </div>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
 echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
+                    </div>
+  
                     </div>
                     </div>
 <div id="Classic" class="tabcontent">
@@ -253,17 +252,12 @@ FRAG;
     ?>
                 </tbody>
             </table>
-        </div>
-    <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Classic Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
-                    </div>
-                    </div>
+                    </div></div></div>
 
 <div id="Bronze" class="tabcontent">
   <div class="table-responsive">
@@ -324,17 +318,14 @@ FRAG;
     ?>
                 </tbody>
             </table>
-        </div> 
-    <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Bronze Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Premier Bronze Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
-                </div>
+   </div>
+                    </div>
 
 <div id="Silver" class="tabcontent">
   <div class="table-responsive">
@@ -395,15 +386,12 @@ FRAG;
     ?>
                 </tbody>
             </table>
-        </div>
-        <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-        <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Silver Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Premier Silver Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
+    </div>
                     </div>
                     </div>
 
@@ -467,15 +455,12 @@ FRAG;
     ?>
                 </tbody>
             </table>
-    </div>
-        <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Gold Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Premier Gold Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
+                    </div>
                     </div>
                     </div>
 
@@ -539,17 +524,15 @@ FRAG;
     ?>
                 </tbody>
             </table>
-                          </div>
-                          <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-                          <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Platinum Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
-                    </div>
+                          </div>
+
+</div>
 
 
 <div id="Senior" class="tabcontent">
@@ -611,15 +594,13 @@ FRAG;
     ?>
                 </tbody>
             </table>
-    </div>
-    <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Senior Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Senior" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
+    </div>
+
                     </div>
                     </div>
 
@@ -681,17 +662,15 @@ FRAG;
         }
     ?>
                 </tbody>
+
             </table>
-    </div>
-    
-    <br>
-    <br>
-    <div class="col-sm-9">
-    </div>
-    <div class="col-sm-3">
+            <br/>
+<div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Senior Plus Members " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+echo "List of Senior Plus Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
+                    </div>
+    </div>
                     </div>
                     </div>
 
