@@ -124,7 +124,7 @@
   <button class="tablinks" onclick="openMembership(event, 'Senior')">Senior</button>
   <button class="tablinks" onclick="openMembership(event, 'Senior Plus')">Senior Plus</button>
 </div>
-
+<br/>
 <div id="All" class="tabcontent">
         <div class="table-responsive">
 <table class="table" id="tblData">
