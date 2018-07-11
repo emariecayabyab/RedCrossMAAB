@@ -70,6 +70,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                     text-decoration: none;
                                     cursor: pointer;
                                 }
+                                th{
+                                    font-size: 13px;
+                                    text-align: center;
+                                }
+                                td{
+                                    font-size: 10px;
+                                }
 
                                 </style>
 

@@ -7,6 +7,12 @@
 
                             <style>
 
+        th{
+                                    font-size: 13px;
+                                    text-align: center;
+                                }
+
+
 /* Style the tab */
 .tab {
     overflow: hidden;
