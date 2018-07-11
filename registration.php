@@ -24,6 +24,43 @@
                                     padding: 16px;
                                 }
 
+                                .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
                                 </style>
 
 <head>
@@ -149,19 +186,20 @@ echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn b
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Create New Member</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
 
-                        <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
+              <h4 class="modal-title">Create New Member</h4>
+              <span class="close">&times;</span><hr/>
+
+
+                        
 
                         <div class="modal-body">
+                            <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
                             <div class ="row">
-                                <div class = "col-sm-4">
-                                     <label>Choose the type of membership/insurance:</label>
+                                <div class = "col-sm-6">
+                                     <label>Choose the type of membership:</label>
                                 </div>
-                                <div class = "col-sm-8">
+                                <div class = "col-sm-4">
                                     <select name="type">
                                         <option value="Classic">Classic</option>
                                         <option value="Bronze">Premier Bronze</option>
