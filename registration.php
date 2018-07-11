@@ -396,7 +396,9 @@ echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn b
 
 
             <!-- /.container-fluid -->
-            <footer class="footer text-center">2018 &copy; Saint Louis University</footer>
+            <footer>
+                <?php include('footer.php'); ?>
+            </footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
