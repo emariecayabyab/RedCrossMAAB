@@ -186,9 +186,9 @@ echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn b
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
-
+            <span class="close">&times;</span>
               <h4 class="modal-title">Create New Member</h4>
-              <span class="close">&times;</span><hr/>
+              <hr/>
 
 
                         
