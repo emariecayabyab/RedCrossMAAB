@@ -107,63 +107,46 @@
                         </div>
                 </div>
                             <div class="table-responsive">
-                                <table class="table" id="tblData">
-                <thead>
-                    <tr>
-                        <th><center>OR NUMBER</center></th>
-                        <th><center>ID NUMBER</center></th>
-                        <th><center>LAST NAME</center></th>
-                        <th><center>FIRST NAME</center></th>
-                        <th><center>MIDDLE NAME</center></th>
-                        <th><center>ADDRESS</center></th>
-                        <th><center>CONTACT NUMBER</center></th>
-                        <th><center>BIRTHDAY</center></th>
-                        <th><center>AGE</center></th>
-                        <th><center>GENDER</center></th>
-                        <th><center>CIVIL STATUS</center></th>
-                        <th><center>REGISTRATION DATE</center></th>
-                        <th><center>EXPIRATION DATE</center></th>
-                    </tr>
-                </thead>
-                <tbody id="myTable">
-                <?php
-                    require 'model/reg.php';
-                    foreach ($members as $member) {
+<?php
+require 'model/reg.php';
+    echo '<table class="table">';
+    echo '<tr>
+              <th>OR NUMBER</th>
+              <th>ID NUMBER</th>
+              <th>LAST NAME</th>
+              <th>FIRST NAME</th>
+              <th>MIDDLE NAME</th>
+              <th>ADDRESS</th>
+              <th>CONTACT NUMBER</th>
+              <th>BIRTHDAY</th>
+              <th>AGE</th>
+              <th>GENDER</th>
+              <th>CIVIL STATUS</th>
+              <th>REGISTRATION DATE</th>
+              <th>EXPIRATION DATE</th>
+          </tr>';
 
-                    $orNum = $member->getOrNum();
-                    $IDNumber = $member->getIdNum();
-                    $lastName = $member->getlName();
-                    $firstName = $member->getfName();
-                    $middleName = $member->getmName();
-                    $address = $member->getaddress();
-                    $contactNumber = $member->getconNum();
-                    $birthday = $member->getBday();
-                    $age = $member->getAge();
-                    $gender = $member->getGender();
-                    $status = $member->getStatus();
-                    $validDate = $member->getvalDate();
-                    $expiryDate = $member->geteDate();
-                    echo <<<FRAG
-                    <tr>
-                    <td>$orNum</td>
-                    <td>$IDNumber</td>
-                    <td>$lastName</td>
-                    <td>$firstName</td>
-                    <td>$middleName</td>
-                    <td>$address</td>
-                    <td>$contactNumber</td>
-                    <td>$birthday</td>
-                    <td>$age</td>
-                    <td>$gender</td>
-                    <td>$status</td>
-                    <td>$validDate</td>
-                    <td>$expiryDate</td>
-                    </tr>
-FRAG;
-        }
-    ?>
-                </tbody>
-            </table>
+    while($row = mysqli_fetch_array($result)){
+        echo "<tr>"; 
+        echo "<td>" .  $row['orNumber'] . "</td>";
+        echo "<td>" .  $row['IDNumber'] . "</td>"; 
+        echo "<td>" .  $row['lastName'] . "</td>";
+        echo "<td>" .  $row['firstName'] . "</td>";
+        echo "<td>" .  $row['middleName'] . "</td>";
+        echo "<td>" .  $row['address'] . "</td>";
+        echo "<td>" .  $row['contactNumber'] . "</td>";
+        echo "<td>" .  $row['birthday'] . "</td>";
+        echo "<td>" .  $row['age'] . "</td>";
+        echo "<td>" .  $row['gender'] . "</td>";
+        echo "<td>" .  $row['status'] . "</td>";
+        echo "<td>" .  $row['validDate'] . "</td>";
+        echo "<td>" .  $row['expiryDate'] . "</td>";
+        echo "<td><a href=delete.php?id=".$row['IDNumber']."><button type='button' class='close'>&times;</button></a></td>";
+        echo "</tr>";
+            }
+ 
+    echo '</table>';
+ ?>
 
                         </div>
                 <br>
@@ -567,7 +550,7 @@ function validateForm() {
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
+  <!--<script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -583,7 +566,7 @@ function validateForm() {
                 }]
             });
         });
-    </script>
+    </script>-->
 </body>
 
 </html>

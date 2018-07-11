@@ -1,16 +1,11 @@
 <?php
 require 'fragments/db.php';
 
+ $query = "DELETE FROM maablist WHERE IDNumber ='$_GET[id]'";
+ if(mysqli_query($db, $query)){
+ 	header("Location: registration.php");
+ } else {
+ 	echo 'failed';
+ }
 
-$id = $_GET['id'];
- 
-
-$query = "DELETE FROM maablist WHERE id=$id";
- $result = mysqli_query($db, $query);
-if($result){
-	echo 'success' . '$id';
-} else {
-	echo '$id';
-}
-header("Location: registration.php");
 ?>

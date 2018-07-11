@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>PRC Membership</title>
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,9 +44,8 @@
     <link href="viewsControl/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
-    <script src="../viewsControl/jQuery/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+   <script src="../viewsControl/jQuery/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -60,12 +59,9 @@
 </head>
 
 <body class="fix-header">
-	<?php include('header.php'); ?>	
+    <?php include('header.php'); ?>
 </body>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <ul class="nav" id="side-menu">
@@ -82,13 +78,16 @@
                 </div>
                 <!-- /row -->
                 <div class="row">
-                    <div class="col-sm-12">
+                    
                         <div class="white-box">
                             <h3 class="box-title">
-                                Expired Membership
+                                <?php
+                                echo "Archived Membership";
+                                ?>
+
                             </h3>
                             <div class="table-responsive">
-                                <table class="table" >
+                                <table class="table" id="tblData">
                                     <thead>
                     <tr>
                         <th><center>OR NUMBER</center></th>
@@ -99,7 +98,7 @@
                         <th><center>ADDRESS</center></th>
                         <th><center>CONTACT NUMBER</center></th>
                         <th><center>REGISTRATION DATE</center></th>
-                        <th><center>VALID UNTIL</center></th>
+                        <th><center>EXPIRATION DATE</center></th>
                     </tr>
                 </thead>
                 <tbody id="myTable">
@@ -135,10 +134,7 @@ FRAG;
                 </tbody>
                                 </table>
                             </div>
-                            <br>
-                            <br>
-                            <div class="row">
-                </div>
+
                         </div>
                     </div>
                 </div>
@@ -151,7 +147,7 @@ FRAG;
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    
+
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
@@ -176,7 +172,7 @@ FRAG;
                 "ordering": true,
                 "searching": true,
                 "paging": true,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
                     "targets": 8,
