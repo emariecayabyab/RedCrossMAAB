@@ -14,6 +14,14 @@
                                 td{
                                     font-size: 10px;
                                 }
+								
+									div.shape{
+									background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+									width:100%;
+									border:1px solid #000;
+									height:10px;"
+								}
+								
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,6 +75,7 @@
                 <!-- /row -->
                 <div class="row">
                     
+						<div class="shape"></div>
                         <div class="white-box">
                             <h3 class="box-title">
                                 <?php
