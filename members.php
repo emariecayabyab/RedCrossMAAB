@@ -11,6 +11,9 @@
                                     font-size: 13px;
                                     text-align: center;
                                 }
+                                td{
+                                    font-size: 10px;
+                                }
 
 
 /* Style the tab */
