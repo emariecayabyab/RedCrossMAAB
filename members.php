@@ -52,6 +52,14 @@
     border: 1px solid #ccc;
     border-top: none;
 }
+
+								div.shape{
+									background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+									width:100%;
+									border:1px solid #000;
+									height:10px;"
+								}
+
                                 </style>
                                 
 
@@ -118,6 +126,7 @@
 
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12">
+		<div class="shape"></div>
             <div class="white-box">
 
 

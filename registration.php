@@ -77,6 +77,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 td{
                                     font-size: 10px;
                                 }
+								
+								div.shape{
+									background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+									width:100%;
+									border:1px solid #000;
+									height:10px;"
+								}
 
                                 </style>
 
@@ -128,11 +135,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Philippine Red Cross New Membership List</h4> </div>
+                        <h4 class="page-title">Philippine Red Cross New Membership List</h4>
+					</div>
                 </div>
                 <!-- /row -->
                 
-                    
+						<div class="shape"></div> 
                         <div class="white-box">
                             <div class="row">
                                 <div class="col-sm-3">
