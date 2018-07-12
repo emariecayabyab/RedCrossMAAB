@@ -1,7 +1,10 @@
   <style>
   nav{
-    background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+    background-image: linear-gradient(-180deg, #393939 0%, #cc0000 100%);
     width: 100%;
+  }
+  font{
+	  size: 10;
   }
 </style>
 
@@ -11,13 +14,12 @@
                     <!-- Logo -->
                     <a class="logo" href="registration.php">
                         <!-- Logo icon image, you can use font-icon also --><b>
-                        <!--This is dark logo icon--><img src="../plugins/images/logo.jpg" /><!--This is light logo icon--><!--img src="../plugins/images/admin-logo-dark.png" alt="home" class="light-logo" /-->
+                        <!--This is dark logo icon--><img src="plugins/images/logoTrans.png" width="60px">
+						<font color="white">Philippine Red Cross</font>
                      </b>
                    </a>
-                </div>
                 <!-- /Logo -->
 				<link rel="icon" type="image/jpg" sizes="16x16" href="../plugins/images/logo.jpg">
-            </div>
                 <!-- /Logo -->
                 <!--ul class="nav navbar-top-links navbar-right pull-right">
                     <li>

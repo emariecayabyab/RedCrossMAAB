@@ -79,12 +79,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 								
 								div.shape{
-									background-image: linear-gradient(-180deg, #393939 0%, #393939 100%);
+									background-image: linear-gradient(-180deg, #393939 0%, #cc0000 100%);
 									width:100%;
 									border:1px solid #000;
 									height:10px;"
 								}
-
                                 </style>
 
 <head>
@@ -198,12 +197,13 @@ require 'model/reg.php';
     echo '</table>';
  ?>
 
-                        </div></div>
+                        </div>
+						</div>
 
                 <div class="row">
                     <div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+						echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
                 </div>
