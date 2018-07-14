@@ -157,7 +157,6 @@
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -177,7 +176,6 @@
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -192,7 +190,6 @@
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -225,7 +222,6 @@ echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-da
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -245,7 +241,6 @@ echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-da
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -260,7 +255,6 @@ echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-da
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -291,7 +285,6 @@ echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn bt
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -311,7 +304,6 @@ echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn bt
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -326,7 +318,6 @@ echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn bt
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -359,7 +350,6 @@ echo "List of Premier Bronze Members" . date("Y/m/d");?>')" type="button" class=
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -379,7 +369,6 @@ echo "List of Premier Bronze Members" . date("Y/m/d");?>')" type="button" class=
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -394,7 +383,6 @@ echo "List of Premier Bronze Members" . date("Y/m/d");?>')" type="button" class=
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -428,7 +416,6 @@ echo "List of Premier Silver Members" . date("Y/m/d");?>')" type="button" class=
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -448,7 +435,6 @@ echo "List of Premier Silver Members" . date("Y/m/d");?>')" type="button" class=
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -463,7 +449,6 @@ echo "List of Premier Silver Members" . date("Y/m/d");?>')" type="button" class=
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -497,7 +482,6 @@ echo "List of Premier Gold Members" . date("Y/m/d");?>')" type="button" class="b
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -517,7 +501,6 @@ echo "List of Premier Gold Members" . date("Y/m/d");?>')" type="button" class="b
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -532,7 +515,6 @@ echo "List of Premier Gold Members" . date("Y/m/d");?>')" type="button" class="b
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -567,7 +549,6 @@ echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" clas
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -587,7 +568,6 @@ echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" clas
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -602,7 +582,6 @@ echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" clas
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -636,7 +615,6 @@ echo "List of Senior" . date("Y/m/d");?>')" type="button" class="btn btn-danger 
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
                         <th>GENDER</th>
-                        <th>CIVIL STATUS</th>
                         <th>REGISTRATION DATE</th>
                         <th>EXPIRATION DATE</th>
                     </tr>
@@ -656,7 +634,6 @@ echo "List of Senior" . date("Y/m/d");?>')" type="button" class="btn btn-danger 
                     $birthday = $member->getBday();
                     $age = $member->getAge();
                     $gender = $member->getGender();
-                    $status = $member->getStatus();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
                     echo <<<FRAG
@@ -671,7 +648,6 @@ echo "List of Senior" . date("Y/m/d");?>')" type="button" class="btn btn-danger 
                     <td>$birthday</td>
                     <td>$age</td>
                     <td>$gender</td>
-                    <td>$status</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
                     </tr>
@@ -792,8 +768,9 @@ $(document).ready(function(){
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
-                    "targets": 12,
+                    "targets": 11,
                     "searchable": false,
+                    "width": "10%", "targets": 5
                 }]
             });
         });

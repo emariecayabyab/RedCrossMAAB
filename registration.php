@@ -169,7 +169,6 @@ require 'model/reg.php';
               <th>BIRTHDAY</th>
               <th>AGE</th>
               <th>GENDER</th>
-              <th>CIVIL STATUS</th>
               <th>REGISTRATION DATE</th>
               <th>EXPIRATION DATE</th>
               <th></th>
@@ -187,7 +186,6 @@ require 'model/reg.php';
         echo "<td>" .  $row['birthday'] . "</td>";
         echo "<td>" .  $row['age'] . "</td>";
         echo "<td>" .  $row['gender'] . "</td>";
-        echo "<td>" .  $row['status'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";
         echo "<td><a href=delete.php?id=".$row['IDNumber']."><button type='button' class='close'>&times;</button></a></td>";
@@ -360,20 +358,6 @@ require 'model/reg.php';
                 <select name="sex">
                     <option value="F">Female</option>
                     <option value="M">Male</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class ="col-sm-4">
-                <label for="status">Civil Status</label>
-            </div>
-            <div class ="col-sm-3">
-                <select name="status">
-                    <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                    <option value="Widowed">Widowed</option>
-                    <option value="Seperated">Seperated</option>
-                    <option value="Divorced">Divorced</option>
                 </select>
             </div>
         </div>
