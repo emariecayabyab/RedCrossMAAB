@@ -10,7 +10,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
                                 /* Full-width input fields */
                                 input[type=text] {
-                                    width: 700px;
+                                    width: 500px;
                                     padding: 15px;
                                     margin: 5px 0 22px 0;
                                     display: inline-block;
@@ -19,10 +19,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 
-                                /* Add padding to container elements */
-                                .container {
-                                    padding: 16px;
-                                }
 
                                 .modal {
                                 display: none; /* Hidden by default */
@@ -43,7 +39,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 .modal-body{
-                                    height: 500px;
+                                    height: 700px;
                                     overflow-y: auto;
                                 }
 
@@ -53,7 +49,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                     margin: 15% auto; /* 15% from the top and centered */
                                     padding: 20px;
                                     border: 1px solid #888;
-                                    width: 80%; /* Could be more or less, depending on screen size */
+                                    width: 100%; /* Could be more or less, depending on screen size */
                                 }
 
                                 /* The Close Button */
@@ -71,7 +67,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                     cursor: pointer;
                                 }
                                 th{
-                                    font-size: 13px;
+                                    font-size: 0.5vw;
                                     text-align: center;
                                 }
                                 td{
@@ -82,14 +78,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 									background-image: linear-gradient(-180deg, #393939 0%, #cc0000 100%);
 									width:100%;
 									border:1px solid #000;
-									height:10px;"
+									height:10px;
 								}
                                 </style>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
@@ -133,7 +129,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <div class="col-lg-8 col-sm-6 ">
                         <h4 class="page-title">Philippine Red Cross New Membership List</h4>
 					</div>
                 </div>
@@ -142,7 +138,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 						<div class="shape"></div> 
                         <div class="white-box">
                             <div class="row">
-                                <div class="col-sm-3">
+                                <div class="col-lg-8 col-sm-6 ">
                                 <h3 class="box-title">
                                     <?php
                                     echo "New Member As of " . date("Y/m/d") . ":";
@@ -208,6 +204,7 @@ require 'model/reg.php';
 
 <div class="modal" id="CNM">
         <div class="modal-dialog">
+            <div class="shape"></div>
           <div class="modal-content">
             <!-- Modal Header -->
             <span class="close">&times;</span>
@@ -216,7 +213,6 @@ require 'model/reg.php';
 
 
                         
-
                         <div class="modal-body">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
                             <div class ="row">
