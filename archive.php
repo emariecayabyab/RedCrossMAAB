@@ -141,9 +141,6 @@ FRAG;
             <footer>
                 <?php include('footer.php'); ?>
             </footer>
-        </div>
-        <!-- /#page-wrapper -->
-    </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
 

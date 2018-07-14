@@ -1,0 +1,16 @@
+<table class="table dataTable" id="tblData"><tbody><tr>
+              <th>OR NUMBER</th>
+              <th>ID NUMBER</th>
+              <th>CHAPTER</th>
+              <th>LAST NAME</th>
+              <th>FIRST NAME</th>
+              <th>MIDDLE NAME</th>
+              <th>ADDRESS</th>
+              <th>CONTACT NUMBER</th>
+              <th>BIRTHDAY</th>
+              <th>AGE</th>
+              <th>GENDER</th>
+              <th>REGISTRATION DATE</th>
+              <th>EXPIRATION DATE</th>
+              <th></th>
+          </tr><tr><td>2390663</td><td>5152887</td><td>Baguio City</td><td>CONVEPCION</td><td>MARIELLE YVONNE</td><td>ALICOY</td><td>PUROK 14 IRISAN BAGUIO CITY</td><td>9105304321</td><td>2005-04-24</td><td>13</td><td>F</td><td>2018-07-14</td><td>2019-07-14</td><td><a href="delete.php?id=5152887"><button type="button" class="close">×</button></a></td></tr></tbody></table>

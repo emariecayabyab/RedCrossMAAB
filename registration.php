@@ -116,6 +116,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <!-- pagination-->
 
     <link rel="stylesheet" href="viewsControl/DataTables/css/dataTables.bootstrap.min.css">
+   
 </head>
 
 <body class="fix-header">
@@ -161,6 +162,7 @@ require 'model/reg.php';
     echo '<tr>
               <th>OR NUMBER</th>
               <th>ID NUMBER</th>
+              <th>CHAPTER</th>
               <th>LAST NAME</th>
               <th>FIRST NAME</th>
               <th>MIDDLE NAME</th>
@@ -177,7 +179,8 @@ require 'model/reg.php';
     while($row = mysqli_fetch_array($result)){
         echo "<tr>"; 
         echo "<td>" .  $row['orNumber'] . "</td>";
-        echo "<td>" .  $row['IDNumber'] . "</td>"; 
+        echo "<td>" .  $row['IDNumber'] . "</td>";
+        echo "<td>Baguio City</td>";
         echo "<td>" .  $row['lastName'] . "</td>";
         echo "<td>" .  $row['firstName'] . "</td>";
         echo "<td>" .  $row['middleName'] . "</td>";
@@ -205,12 +208,15 @@ require 'model/reg.php';
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+
 
 <div class="modal" id="CNM">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
-            <span class="close">&times;</span>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Create New Member</h4>
               <hr/>
 
@@ -391,11 +397,6 @@ require 'model/reg.php';
             <footer>
                 <?php include('footer.php'); ?>
             </footer>
-        </div>
-        <!-- /#page-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
 
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

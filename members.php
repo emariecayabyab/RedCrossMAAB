@@ -770,7 +770,7 @@ $(document).ready(function(){
                     
                     "targets": 11,
                     "searchable": false,
-                    "width": "10%", "targets": 5
+                    "width": "10%", "targets": 5,
                 }]
             });
         });

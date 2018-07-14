@@ -55,3 +55,14 @@ SAVE TO COMPUTER (ARA)
  - print to excel (DONE)
 
  
+
+
+ FIX:
+  - modal X button
+  - table font size and face
+  - modal design
+
+
+  - Manual
+  - Flow chart
+  - database AUG 2017-2018

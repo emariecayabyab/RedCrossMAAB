@@ -88,6 +88,7 @@
                     <tr>
                         <th><center>OR NUMBER</center></th>
                         <th><center>ID NUMBER</center></th>
+                        <th><center>CHAPTER</center></th>
                         <th><center>LAST NAME</center></th>
                         <th><center>FIRST NAME</center></th>
                         <th><center>MIDDLE NAME</center></th>
@@ -116,6 +117,7 @@
                     <tr>
                     <td>$orNum</td>
                     <td>$IDNumber</td>
+                    <td>Baguio City</td>
                     <td>$lastName</td>
                     <td>$firstName</td>
                     <td>$middleName</td>
@@ -215,7 +217,7 @@ FRAG;
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
-                    "targets": ,
+                    "targets": 9,
                     "searchable": false,
                 }]
             });
