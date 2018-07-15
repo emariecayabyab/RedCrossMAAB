@@ -277,13 +277,13 @@ require 'model/reg.php';
                 <input class="form-control" autocomplete="false" type = "text" id="midname" name="midname" placeholder="Middle Name...">
                 <input class="form-control" autocomplete="false" type = "text" id="lname" name="lname" placeholder="Last Name...">
         </div>
-    <div class="column">
     <div class="row">   
             <div class="col col-lg-2">
                 <label for="bday">Birthday</label>
             </div>
-            <div class="row col-sm-2">
+            <div class="col-sm-2">
                 <input class="form-control" autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">
+            </div>
                 <select name="bmonth">
                     <option disabled selected value="Month">Month</option>
                     <option value="01">January</option>
@@ -334,8 +334,6 @@ require 'model/reg.php';
                     <option value="31">31</option>
                 </select>
             </div>
-        </div>
-    </div>
 
             <div class ="col-sm-2">
                 <label for="age">Age</label>
