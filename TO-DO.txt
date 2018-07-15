@@ -16,7 +16,7 @@ TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Search Bar -- Emm (DONE)
 	- Button - All+lelvels of membership (DONE)
 	- Pagination (DONE)
-	- Remove Button per data in Table  - x mark? (registration only)
+	- Remove Button per data in Table  - x mark? (registration only)(DONE)
 	- default tab ung ALL (DONE)
 	
 REGISTRATION
