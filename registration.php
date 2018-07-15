@@ -34,22 +34,21 @@ body {font-family: Arial, Helvetica, sans-serif;}
                             }
 
                                 .modal-dialog{
-                                    width: 800px;
                                     overflow-y: initial !important
                                 }
 
                                 .modal-body{
-                                    height: 700px;
+                                    width: 100%;
                                     overflow-y: auto;
                                 }
 
                                 /* Modal Content/Box */
                                 .modal-content {
                                     background-color: #fefefe;
-                                    margin: 15% auto; /* 15% from the top and centered */
+                                    margin: 0px auto; /* 15% from the top and centered */
                                     padding: 20px;
                                     border: 1px solid #888;
-                                    width: 100%; /* Could be more or less, depending on screen size */
+                     /* Could be more or less, depending on screen size */
                                 }
 
                                 /* The Close Button */
@@ -67,7 +66,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                     cursor: pointer;
                                 }
                                 th{
-                                    font-size: 0.5vw;
+                                    font-size: 13px;
                                     text-align: center;
                                 }
                                 td{
@@ -80,6 +79,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 									border:1px solid #000;
 									height:10px;
 								}
+
+                                div.modal-xl {
+                                    width: 70%;
+                                }
+
                                 </style>
 
 <head>
@@ -209,23 +213,17 @@ require 'model/reg.php';
 
 
 <div class="modal" id="CNM">
-        <div class="modal-dialog">
-            <div class="shape"></div>
+        <div class="modal-dialog modal-xl">
+          <div class="shape"></div>
           <div class="modal-content">
             <!-- Modal Header -->
             <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Create New Member</h4>
-              <hr/>
-
-
-                        
-                        <div class="modal-body">
+                        <div class="row">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
-                            <div class ="row">
-                                <div class = "col-sm-6">
+                                <div class = "col-sm-8">
                                      <label>Choose the type of membership:</label>
-                                </div>
-                                <div class = "col-sm-4">
+                                <div class = "col-md-8 pull-right">
                                     <select name="type">
                                         <option value="Classic">Classic</option>
                                         <option value="Bronze">Premier Bronze</option>
@@ -237,60 +235,55 @@ require 'model/reg.php';
                                     </select>
                                 </div>
                             </div>
+                        </div>
+                        
+        <!--LEFT SIDE-->
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col col-lg-2">
                 <label for="orNum">OR Number</label>   
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
                 <input class="form-control" autocomplete="false" type = "text" id="orNum" name="orNum">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-               <label for="idNum">ID Number</label>   
-            </div>
-            <div class="col-sm-8">
-                <input class="form-control" autocomplete="false" type = "text" id="idNum" name="idNum">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <label for="fname">Member Name</label>   
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="fname" name="fname" placeholder="First Name...">
-            </div>
-            <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="midname" name="midname" placeholder="Middle Name..."></div>
-            <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="lname" name="lname" placeholder="Last Name..."></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
+
+            <div class="col col-lg-2">
                 <label for="add">Address</label>   
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
                 <input class="form-control" autocomplete="false" type = "text" id="addr" name="addr">
             </div>
+
         </div>
         <div class="row">
+            <div class="col col-lg-2">
+               <label for="idNum">ID Number</label>   
+            </div>
             <div class="col-sm-4">
+                <input class="form-control" autocomplete="false" type = "text" id="idNum" name="idNum">
+            </div>
+        <div class="col col-lg-2">
                 <label for="contact">Contact Number</label>   
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
                 <input class="form-control" autocomplete="false" type = "text" id="contact" name="contact">
             </div>
         </div>
         <div class="row">
+            <div class="col col-lg-2">
+                <label for="fname">Member Name</label>   
+            </div>
             <div class="col-sm-4">
-                <label for="bday">Birthday</label>   
+                <input class="form-control" autocomplete="false" type = "text" id="fname" name="fname" placeholder="First Name...">
+                <input class="form-control" autocomplete="false" type = "text" id="midname" name="midname" placeholder="Middle Name...">
+                <input class="form-control" autocomplete="false" type = "text" id="lname" name="lname" placeholder="Last Name...">
+        </div>
+    <div class="row">   
+            <div class="col col-lg-2">
+                <label for="bday">Birthday</label>
             </div>
-            <div class="col-sm-3">
-                <input class="form-control" autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">   
+            <div class="col-sm-2">
+                <input class="form-control" autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">
             </div>
-            <div class="col-sm-3">
                 <select name="bmonth">
                     <option disabled selected value="Month">Month</option>
                     <option value="01">January</option>
@@ -306,8 +299,6 @@ require 'model/reg.php';
                     <option value="11">November</option>
                     <option value="12">December</option>
                 </select>
-            </div>
-            <div class="col-sm-2">
                 <select name="bdate">
                     <option disabled selected value="Day">Day</option>
                     <option value="01">1</option>
@@ -343,42 +334,39 @@ require 'model/reg.php';
                     <option value="31">31</option>
                 </select>
             </div>
-        </div>
-        <div class="row">
-            <div class ="col-sm-4">
+
+            <div class ="col-sm-2">
                 <label for="age">Age</label>
             </div>
-            <div class ="col-sm-3">
+            <div class ="col-sm-2">
                 <input class="form-control" autocomplete="false" type = "text" id="age" name="age">
             </div>
-        </div>
-        <div class="row">
-            <div class ="col-sm-4">
+            <div class ="col-sm-2">
                  <label for="Sex">Sex</label>
             </div>
-            <div class ="col-sm-3">
+            <div class ="col-sm-2">
                 <select name="sex">
                     <option value="F">Female</option>
                     <option value="M">Male</option>
                 </select>
             </div>
-        </div>
+         </div>
+
         <div class="row">
-            <div class ="col-sm-4">
+            <div class ="col col-lg-2">
                 <label for="vdate">Valid Date</label>
             </div>
-            <div class ="col-sm-6">
+            <div class ="col-sm-4">
                 <input class="form-control" autocomplete="false" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
             </div>
-        </div>
-        <div class="row">
-            <div class ="col-sm-4">
+            <div class ="col col-lg-2">
                 <label for="edate">Expiration Date</label>
             </div>
-            <div class ="col-sm-6">
+            <div class ="col-sm-4">
                 <input class="form-control" autocomplete="false" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
             </div>
         </div>
+
         <div class="modal-footer">
             <button id="addmember" type="submit" class="btn btn-danger">Add</button>
         </div>
@@ -386,7 +374,7 @@ require 'model/reg.php';
     </form>
         </div>
     </div>
-    </div>
+</div>
 
 
             <!-- /.container-fluid -->
