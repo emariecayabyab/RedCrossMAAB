@@ -1,3 +1,22 @@
+
+
+ FIX:
+  - modal X button
+  - table font size and face (should not be scrollable)
+  - modal design
+  - Responsive design except side bar
+  - save excel button
+  - validation of all fields should not be empty
+  - statis IP/server address
+  - scroll of modal mobile
+
+
+  - Manual
+  - Flow chart
+  - database AUG 2017-2018
+
+
+
 * use include function - JANN
 	- nav.php (DONE)
 	- footer.php (DONE)
@@ -11,7 +30,6 @@ NAV - JANN
  
 TABLES (REGISTRATION, MEMBER LIST, NOTIFICATION, ARCHIVE)
 	- Table title should be Centered
-
 	- Auto order to DSC -- EMM (DONE)
 	- Search Bar -- Emm (DONE)
 	- Button - All+lelvels of membership (DONE)
@@ -56,13 +74,3 @@ SAVE TO COMPUTER (ARA)
 
  
 
-
- FIX:
-  - modal X button
-  - table font size and face
-  - modal design
-
-
-  - Manual
-  - Flow chart
-  - database AUG 2017-2018
