@@ -4,11 +4,11 @@
   - modal X button
   - table font size and face (should not be scrollable)
   - modal design
-  - Responsive design except side bar
+  - Responsive design except side bar (DONE)
   - save excel button
   - validation of all fields should not be empty
-  - statis IP/server address
-  - scroll of modal mobile
+  - static IP/server address
+  - scroll of modal mobile (DONE)
 
 
   - Manual
