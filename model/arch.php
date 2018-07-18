@@ -20,7 +20,7 @@
         $validDate = $row['validDate'];
         $expiryDate = $row['expiryDate'];
 
-        $member = new Member($orNum, $IDNumber, $lastName, $firstName, $middleName, $address, $contactNumber,$birthday, $age, $gender, $status, $validDate, $expiryDate);
+        $member = new Member($orNum, $IDNumber, $lastName, $firstName, $middleName, $address, $contactNumber,$birthday, $age, $gender, $validDate, $expiryDate);
         $members[] = $member;
     }
 

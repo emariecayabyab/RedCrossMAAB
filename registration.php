@@ -36,18 +36,29 @@ body {font-family: Arial, Helvetica, sans-serif;}
                             }
 
                                 .modal-dialog{
+									vertical-align:middle;
                                     overflow-y: initial !important
                                 }
 
                                 .modal-body{
+									height: 500px;
                                     width: 100%;
-                                    overflow-y: auto;
+                                    overflow:hidden;
                                 }
+								.modal-body:hover{
+									overflow-y:auto;
+								}
+								
+								.popupheader{
+									background-color:black;
+									color:white;
+								}
+								
 
                                 /* Modal Content/Box */
                                 .modal-content {
                                     background-color: #fefefe;
-                                    margin: 0px auto; /* 15% from the top and centered */
+                                    margin:auto; /* 15% from the top and centered */
                                     padding: 20px;
                                     border: 1px solid #888;
                      /* Could be more or less, depending on screen size */
@@ -221,10 +232,12 @@ require 'model/reg.php';
           <div class="modal-content">
             <!-- Modal Header -->
             <button type="button" class="close" data-dismiss="modal">&times;</button>
+			<div class = "modal-body">
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
-                                <div class = "col-sm-8">
+                                
+								<div class = "col-sm-8">
                                      <label>Choose the type of membership:</label>
                                 <div class = "col-md-8 pull-right">
                                     <select name="type">
@@ -378,7 +391,7 @@ require 'model/reg.php';
         </div>
     </div>
 </div>
-
+</div>
 
             <!-- /.container-fluid -->
             <footer>
