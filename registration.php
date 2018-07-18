@@ -39,7 +39,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 .modal-body{
-									height: 500px;
+									height: 450px;
                                     width: 100%;
                                     overflow:hidden;
                                 }
@@ -94,6 +94,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 div.modal-xl {
                                     width: 70%;
                                 }
+								
+								p{
+									text-align:left;
+									font-family: sans-serif;
+									font-size: 20.5px;
+								}
 
                                 </style>
 
@@ -230,13 +236,14 @@ require 'model/reg.php';
             <!-- Modal Header -->
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 			<div class = "modal-body">
+			<p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
                                 
 								<div class = "col-sm-8">
                                      <label>Choose the type of membership:</label>
-                                <div class = "col-md-8 pull-right">
+                                <div class = "col-md-6 pull-right">
                                     <select name="type">
                                         <option value="Classic">Classic</option>
                                         <option value="Bronze">Premier Bronze</option>
@@ -381,7 +388,11 @@ require 'model/reg.php';
         </div>
 
         <div class="modal-footer">
+		<div class="row">
+			
             <button id="addmember" type="submit" class="btn btn-danger">Add</button>
+			</p>
+		</div>
         </div>
     </div>
     </form>
