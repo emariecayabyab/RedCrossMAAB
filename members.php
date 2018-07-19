@@ -162,7 +162,11 @@
 <br/>
 <div id="All" class="tabcontent">
         <div class="table-responsive">
+<<<<<<< HEAD
             <table id="all" class="table table-striped table-bordered" style="width:100%">
+=======
+<table class="table" id="all">
+>>>>>>> f6b3bd1cfb18f0903caefa50597d0f5cded99004
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -215,13 +219,28 @@ FRAG;
         }
     ?>
                 </tbody>
+<<<<<<< HEAD
             </table> 
+=======
+            </table>
+            <br/>
+<div class="col-sm-3 pull-right">
+                        <button onclick="exportTableToExcel('all','<?php
+echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
+  
+>>>>>>> f6b3bd1cfb18f0903caefa50597d0f5cded99004
                     </div>
                     </div>
 
 <div id="Classic" class="tabcontent">
         <div class="table-responsive">
+<<<<<<< HEAD
 <table id="classic" class="table table-striped table-bordered" style="width:100%">
+=======
+            <table class="table" id="classic">
+>>>>>>> f6b3bd1cfb18f0903caefa50597d0f5cded99004
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -274,9 +293,19 @@ FRAG;
         }
     ?>
                 </tbody>
+<<<<<<< HEAD
             </table> 
                     </div>
                     </div>
+=======
+            </table>
+            <br/>
+<div class="col-sm-3 pull-right">
+                        <button onclick="exportTableToExcel('classic','<?php
+echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div></div></div>
+>>>>>>> f6b3bd1cfb18f0903caefa50597d0f5cded99004
 
 <div id="Bronze" class="tabcontent">
   <div class="table-responsive">
