@@ -468,29 +468,46 @@ function validateForm() {
     var bmo  = document.forms["addmem"]["bmonth"].value;
     var bday = document.forms["addmem"]["bdate"].value;
     var age = document.forms["addmem"]["age"].value;
+    var add  = document.forms["addmem"]["addr"].value;
+    var conNo = document.forms["addmem"]["contact"].value;
 
     if (orNumber == "") {
-        alert("OR Number must be filled out");
+        alert("OR Number must be filled out.");
         return false;
     }
     if (IDNumber == "") {
-        alert("ID Number must be filled out");
-        return false;
-    }
-    if (lastName == "") {
-        alert("Last Name must be filled out");
+        alert("ID Number must be filled out.");
         return false;
     }
     if (firstName == "") {
-        alert("First Name must be filled out");
+        alert("First Name must be filled out.");
         return false;
     }
     if (middleName == "") {
-        alert("Middle Name must be filled out");
+        alert("Middle Name must be filled out.");
+        return false;
+    }
+    if (lastName == "") {
+        alert("Last Name must be filled out.");
+        return false;
+    }
+    if (age=< 0) {
+        alert("Please use valid Age number only.");
+        return false;
+    } else if (age == "") {
+        alert("Please use valid Age number only.");
+        return false;
+    }
+    if (add == "") {
+        alert("Address must be filled out.");
+        return false;
+    }
+    if (contact== "") {
+        alert("Contact Number must be filled out. If none, please put n/a.");
         return false;
     }
     if (byr == "") {
-        alert("Birth Year must be filled out");
+        alert("Birth Year must be filled out.");
         return false;
     }
     if (bmo == "Month") {
@@ -501,10 +518,8 @@ function validateForm() {
         alert("Please choose BIRTH DAY.");
         return false;
     }
-    if (age< 0) {
-        alert("Please use valid Age number only");
-        return false;
-    }
+    
+
 }
 </script>
 
