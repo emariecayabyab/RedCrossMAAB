@@ -144,7 +144,7 @@
 <br/>
 <div id="All" class="tabcontent">
         <div class="table-responsive">
-<table class="table" id="tblData">
+<table class="table" id="all">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -200,7 +200,7 @@ FRAG;
             </table>
             <br/>
 <div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
+                        <button onclick="exportTableToExcel('all','<?php
 echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
@@ -209,7 +209,7 @@ echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-da
                     </div>
 <div id="Classic" class="tabcontent">
         <div class="table-responsive">
-            <table class="table" id="tblData">
+            <table class="table" id="classic">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -265,7 +265,7 @@ FRAG;
             </table>
             <br/>
 <div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
+                        <button onclick="exportTableToExcel('classic','<?php
 echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div></div></div>
