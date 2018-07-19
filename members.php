@@ -85,6 +85,19 @@
     <link href="viewsControl/css/colors/default.css" id="theme" rel="stylesheet">
    <script src="../viewsControl/jQuery/jquery.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- Script for excel -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+   <!-- End Script for excel -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -121,14 +134,19 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-8 col-sm-6 ">
-                        <h4 class="page-title">Philippine Red Cross Membership List</h4> </div>
+                        <h4 class="page-title">Philippine Red Cross Membership List</h4>
+                    </div>
+                    
                 </div>
 
     <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12">
 		<div class="shape"></div>
             <div class="white-box">
+        <div class="row">
+            
 
+        </div>
 
 
 <div class="tab">
@@ -144,7 +162,7 @@
 <br/>
 <div id="All" class="tabcontent">
         <div class="table-responsive">
-<table class="table" id="tblData">
+            <table id="all" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -197,19 +215,13 @@ FRAG;
         }
     ?>
                 </tbody>
-            </table>
-            <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of All Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
-  
+            </table> 
                     </div>
                     </div>
+
 <div id="Classic" class="tabcontent">
         <div class="table-responsive">
-            <table class="table" id="tblData">
+<table id="classic" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -262,17 +274,13 @@ FRAG;
         }
     ?>
                 </tbody>
-            </table>
-            <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Classic Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div></div></div>
+            </table> 
+                    </div>
+                    </div>
 
 <div id="Bronze" class="tabcontent">
   <div class="table-responsive">
-<table class="table" id="tblData">
+<table id="bronze" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -327,17 +335,12 @@ FRAG;
                 </tbody>
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Premier Bronze Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
    </div>
                     </div>
 
 <div id="Silver" class="tabcontent">
   <div class="table-responsive">
-    <table class="table" id="tblData">
+    <table id="silver" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -392,18 +395,13 @@ FRAG;
                 </tbody>
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Premier Silver Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-    </div>
                     </div>
                     </div>
 
 
 <div id="Gold" class="tabcontent">
   <div class="table-responsive">
-    <table class="table" id="tblData">
+    <table id="gold" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -458,18 +456,13 @@ FRAG;
                 </tbody>
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Premier Gold Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
                     </div>
                     </div>
 
 
 <div id="Platinum" class="tabcontent">
   <div class="table-responsive">
-    <table class="table" id="tblData">
+    <table id="platinum" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -524,11 +517,6 @@ FRAG;
                 </tbody>
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
                           </div>
 
 </div>
@@ -536,7 +524,7 @@ echo "List of Premier Platinum Members" . date("Y/m/d");?>')" type="button" clas
 
 <div id="Senior" class="tabcontent">
   <div class="table-responsive">
-    <table class="table" id="tblData">
+    <table id="senior" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -591,18 +579,13 @@ FRAG;
                 </tbody>
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Senior" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-    </div>
 
                     </div>
                     </div>
 
 <div id="Senior Plus" class="tabcontent">
   <div class="table-responsive">
-    <table class="table" id="tblData">
+    <table id="splus" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>OR NUMBER</th>
@@ -658,49 +641,11 @@ FRAG;
 
             </table>
             <br/>
-<div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-echo "List of Senior Plus Members" . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
     </div>
                     </div>
                     </div>
 
-<!-- Export as Excel -->
-    <script type="text/javascript">
-        function exportTableToExcel(tableID, filename = ''){
-    var downloadLink;
-    var dataType = 'application/vnd.ms-excel';
-    var tableSelect = document.getElementById(tableID);
-    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-    
-    // Specify file name
-    filename = filename?filename+'.xls':'excel_data.xls';
-    
-    // Create download link element
-    downloadLink = document.createElement("a");
-    
-    document.body.appendChild(downloadLink);
-    
-    if(navigator.msSaveOrOpenBlob){
-        var blob = new Blob(['\ufeff', tableHTML], {
-            type: dataType
-        });
-        navigator.msSaveOrOpenBlob( blob, filename);
-    }else{
-        // Create a link to the file
-        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-    
-        // Setting the file name
-        downloadLink.download = filename;
-        
-        //triggering the function
-        downloadLink.click();
-    }
-}
-    </script>
-    <!-- End of Save as excel -->
+</script>
 <script>
 document.getElementsByClassName('tablinks')[0].click()
 function openMembership(evt, cityName) {
@@ -752,30 +697,86 @@ $(document).ready(function(){
   });
 });
 </script>-->
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".table").DataTable({
-                "ordering": true,
-                "searching": true,
-                "paging": true,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                "columnDefs": [{
-                    
-                    "targets": 11,
-                    "searchable": false,
-                    "width": "10%", "targets": 5,
-                }]
-            });
-        });
-    </script>
 
 </body>
-
+<script>
+    $(document).ready(function() {
+    $('#all').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#classic').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+           'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#bronze').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#silver').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#gold').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#platinum').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#senior').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('#splus').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
+    </script>
 </html>

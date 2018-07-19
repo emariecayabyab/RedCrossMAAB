@@ -47,6 +47,19 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<!-- Script for excel -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+   <!-- End Script for excel -->
 
   <!-- pagination-->
 
@@ -83,7 +96,7 @@
 
                             </h3>
                             <div class="table-responsive">
-                                <table class="table" id="tblData">
+                                <table id="exmem" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                     <tr>
                         <th><center>OR NUMBER</center></th>
@@ -134,16 +147,6 @@ FRAG;
                             </div>
                             <br>
                             <br>
-                            <div class="row">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-3">
-                    </div>
-                    <div class="col-sm-3">
-                        <button onclick="exportTableToExcel('tblData','nameOfFile')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
-                </div>
                         </div>
                     </div>
                 </div>
@@ -201,27 +204,16 @@ FRAG;
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="viewsControl/DataTables/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="viewsControl/DataTables/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".table").DataTable({
-                "ordering": true,
-                "searching": true,
-                "paging": true,
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                "columnDefs": [{
-                    
-                    "targets": 9,
-                    "searchable": false,
-                }]
-            });
-        });
+    
+     <script>
+    $(document).ready(function() {
+    $('#exmem').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel', 'pdf'
+        ]
+    } );
+} );
     </script>
 </body>
 

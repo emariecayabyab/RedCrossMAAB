@@ -36,24 +36,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
                             }
 
                                 .modal-dialog{
-									vertical-align:middle;
+                                    vertical-align:middle;
                                     overflow-y: initial !important
                                 }
 
                                 .modal-body{
-									height: 450px;
+                                    height: 450px;
                                     width: 100%;
                                     overflow:hidden;
                                 }
-								.modal-body:hover{
-									overflow-y:auto;
-								}
-								
-								.popupheader{
-									background-color:black;
-									color:white;
-								}
-								
+                                .modal-body:hover{
+                                    overflow-y:auto;
+                                }
+                                
+                                .popupheader{
+                                    background-color:black;
+                                    color:white;
+                                }
+                                
 
                                 /* Modal Content/Box */
                                 .modal-content {
@@ -85,23 +85,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 td{
                                     font-size: 10px;
                                 }
-								
-								div.shape{
-									background-image: linear-gradient(-180deg, #393939 0%, #cc0000 100%);
-									width:100%;
-									border:1px solid #000;
-									height:10px;
-								}
+                                
+                                div.shape{
+                                    background-image: linear-gradient(-180deg, #393939 0%, #cc0000 100%);
+                                    width:100%;
+                                    border:1px solid #000;
+                                    height:10px;
+                                }
 
                                 div.modal-xl {
                                     width: 70%;
                                 }
-								
-								p{
-									text-align:left;
-									font-family: sans-serif;
-									font-size: 20.5px;
-								}
+                                
+                                p{
+                                    text-align:left;
+                                    font-family: sans-serif;
+                                    font-size: 20.5px;
+                                }
 
                                 </style>
 
@@ -156,11 +156,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 <div class="row bg-title">
                     <div class="col-lg-8 col-sm-6 ">
                         <h4 class="page-title">Philippine Red Cross New Membership List</h4>
-					</div>
+                    </div>
                 </div>
                 <!-- /row -->
                 
-						<div class="shape"></div> 
+                        <div class="shape"></div> 
                         <div class="white-box">
                             <div class="row">
                                 <div class="col-lg-8 col-sm-6 ">
@@ -178,7 +178,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                             <div class="table-responsive">
                                 <?php
 require 'model/reg.php';
-    echo '<table class="table" id="tblData">';
+    echo '<table id="tblData" class="table table-striped table-bordered" style="width:100%">';
     echo '<tr>
               <th>OR NUMBER</th>
               <th>ID NUMBER</th>
@@ -219,12 +219,12 @@ require 'model/reg.php';
  ?>
 
                         </div>
-						</div>
+                        </div>
 
                 <div class="row">
                     <div class="col-sm-3 pull-right">
                         <button onclick="exportTableToExcel('tblData','<?php
-						echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
                         </button>
                     </div>
                 </div>
@@ -238,13 +238,13 @@ require 'model/reg.php';
           <div class="modal-content">
             <!-- Modal Header -->
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-			<div class = "modal-body">
-			<p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
+            <div class = "modal-body">
+            <p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
                                 
-								<div class = "col-sm-8">
+                                <div class = "col-sm-8">
                                      <label>Choose the type of membership:</label>
                                 <div class = "col-md-6 pull-right">
                                     <select name="type">
@@ -391,11 +391,11 @@ require 'model/reg.php';
         </div>
 
         <div class="modal-footer">
-		<div class="row">
-			
+        <div class="row">
+            
             <button id="addmember" type="submit" class="btn btn-danger">Add</button>
-			</p>
-		</div>
+            </p>
+        </div>
         </div>
     </div>
     </form>
