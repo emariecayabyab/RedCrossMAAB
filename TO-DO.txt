@@ -6,7 +6,7 @@
   - modal design
   - Responsive design except side bar (DONE)
   - save excel button
-  - validation of all fields should not be empty
+  - validation of all fields should not be empty (DONE)
   - static IP/server address
   - scroll of modal mobile (DONE)
 
