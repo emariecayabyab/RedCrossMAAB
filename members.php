@@ -4,15 +4,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+                            
                             <style>
-
+                            table {
+                                 border: 1px solid black;
+                            }
+div.container {
+        width: 80%;
+    }
         th{
                                     font-size: 13px;
                                     text-align: center;
                                 }
                                 td{
-                                    font-size: 10px;
+                                    font-size: 8px;
+                                    color: black;
+                                    font-weight: bold;
+                                     border: 1px solid black;
+                                }
+
+                                th {
+                                    font-size: 7.5px;
+                                    color: black;
+                                    font-weight: bold;
+                                     border: 1px solid black;
                                 }
 
 

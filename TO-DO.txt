@@ -5,7 +5,7 @@
   - table font size and face (should not be scrollable)
   - modal design
   - Responsive design except side bar (DONE)
-  - save excel button
+  - save excel button (DONE)
   - validation of all fields should not be empty (DONE)
   - static IP/server address (DONE)
   - scroll of modal mobile (DONE)
