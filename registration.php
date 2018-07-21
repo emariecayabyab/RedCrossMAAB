@@ -266,14 +266,14 @@ require 'model/reg.php';
                 <label for="orNum">OR Number</label>   
             </div>
             <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="orNum" name="orNum">
+                <input class="form-control" autocomplete="off" type = "text" id="orNum" name="orNum">
             </div>
 
             <div class="col col-lg-2">
                 <label for="add">Address</label>   
             </div>
             <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="addr" name="addr">
+                <input class="form-control" autocomplete="off" type = "text" id="addr" name="addr">
             </div>
 
         </div>
@@ -282,13 +282,13 @@ require 'model/reg.php';
                <label for="idNum">ID Number</label>   
             </div>
             <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="idNum" name="idNum">
+                <input class="form-control" autocomplete="off" type = "text" id="idNum" name="idNum">
             </div>
         <div class="col col-lg-2">
                 <label for="contact">Contact Number</label>   
             </div>
             <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="contact" name="contact">
+                <input class="form-control" autocomplete="off" type = "text" id="contact" name="contact">
             </div>
         </div>
         <div class="row">
@@ -296,16 +296,16 @@ require 'model/reg.php';
                 <label for="fname">Member Name</label>   
             </div>
             <div class="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="fname" name="fname" placeholder="First Name...">
-                <input class="form-control" autocomplete="false" type = "text" id="midname" name="midname" placeholder="Middle Name...">
-                <input class="form-control" autocomplete="false" type = "text" id="lname" name="lname" placeholder="Last Name...">
+                <input class="form-control" autocomplete="off" type = "text" id="fname" name="fname" placeholder="First Name...">
+                <input class="form-control" autocomplete="off" type = "text" id="midname" name="midname" placeholder="Middle Name...">
+                <input class="form-control" autocomplete="off" type = "text" id="lname" name="lname" placeholder="Last Name...">
         </div>
     <div class="row">   
             <div class="col col-lg-2">
                 <label for="bday">Birthday</label>
             </div>
             <div class="col-sm-2">
-                <input class="form-control" autocomplete="false" type = "text" id="byear" name="byear" label="year" placeholder="Year">
+                <input class="form-control" autocomplete="off" type = "text" id="byear" name="byear" label="year" placeholder="Year">
             </div>
                 <select name="bmonth">
                     <option disabled selected value="Month">Month</option>
@@ -362,7 +362,7 @@ require 'model/reg.php';
                 <label for="age">Age</label>
             </div>
             <div class ="col-sm-2">
-                <input class="form-control" autocomplete="false" type = "text" id="age" name="age">
+                <input class="form-control" autocomplete="off" type = "text" id="age" name="age">
             </div>
             <div class ="col-sm-2">
                  <label for="Sex">Sex</label>
@@ -380,13 +380,13 @@ require 'model/reg.php';
                 <label for="vdate">Valid Date</label>
             </div>
             <div class ="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
+                <input class="form-control" autocomplete="off" type = "text" id="vdate" name="vdate" value="<?php echo date('Y-m-d');?>">
             </div>
             <div class ="col col-lg-2">
                 <label for="edate">Expiration Date</label>
             </div>
             <div class ="col-sm-4">
-                <input class="form-control" autocomplete="false" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
+                <input class="form-control" autocomplete="off" type = "text" id="vdate" name="edate" value="<?php echo date('Y-m-d', strtotime('+1 year'));?>">
             </div>
         </div>
 

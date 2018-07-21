@@ -94,7 +94,7 @@
    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+   <script scr="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
    <!-- End Script for excel -->
@@ -698,7 +698,7 @@ $(document).ready(function(){
     $('#all').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -708,7 +708,7 @@ $(document).ready(function(){
     $('#classic').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-           'excel', 'pdf'
+           'excel'
         ]
     } );
 } );
@@ -718,7 +718,7 @@ $(document).ready(function(){
     $('#bronze').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -728,7 +728,7 @@ $(document).ready(function(){
     $('#silver').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -738,7 +738,7 @@ $(document).ready(function(){
     $('#gold').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -748,7 +748,7 @@ $(document).ready(function(){
     $('#platinum').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -758,7 +758,7 @@ $(document).ready(function(){
     $('#senior').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
@@ -768,7 +768,7 @@ $(document).ready(function(){
     $('#splus').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'excel', 'pdf'
+            'excel'
         ]
     } );
 } );
