@@ -138,7 +138,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 
 <body>
-    <?php include('header.php'); ?>
+    <?php include('headerMobile.php'); ?>
 </body>
 
  
