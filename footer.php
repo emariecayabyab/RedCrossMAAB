@@ -1,8 +1,13 @@
 <style>
-	footer(
-		
-	)
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #585858;
+}
 </style>
 
-
-<footer class="footer">2018 &copy; Red Cross Baguio City Chapter</footer>
+<div class="footer">
+  <p style="text-align: center; font-size: 13px; font-family: sans-serif;">2018 @ Red Cross Baguio City Chapter</p>
+</div>

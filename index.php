@@ -142,7 +142,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </body>
 
  
-        <div id="page-wrapper">
+        
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-8 col-sm-6 ">
@@ -387,9 +387,8 @@ require 'model/reg.php';
 </div>
 
             <!-- /.container-fluid -->
-            <footer>
+
                 <?php include('footer.php'); ?>
-            </footer>
 
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
