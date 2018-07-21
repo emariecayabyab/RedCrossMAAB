@@ -211,7 +211,7 @@ require 'model/reg.php';
         echo "<td>" .  $row['gender'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";
-        echo "<td><a href=delete.php?id=".$row['IDNumber']."><button type='button' class='close'>&times;</button></a></td>";
+        echo "<td><a href=delete.php?id=".$row['IDNumber']." class='confirmation'><button type='button' class='close'>&times;</button></a></td>";
         echo "</tr>";
             }
  
@@ -452,6 +452,11 @@ require 'model/reg.php';
     }
 }
     </script>
+    <script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure you want to DELETE?');
+    });
+</script>
     <style>
     #exportButton {
         border-radius: 0;
