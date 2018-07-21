@@ -242,7 +242,7 @@ require 'model/reg.php';
             <p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
-                            <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
+                            <form name="addmem" action="formModPC.php" method="post" onsubmit="return validateForm()">
                                 
                                 <div class = "col-sm-8">
                                      <label>Choose the type of membership:</label>
