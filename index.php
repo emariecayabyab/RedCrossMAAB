@@ -388,7 +388,7 @@ require 'model/reg.php';
 
             <!-- /.container-fluid -->
 
-                <?php include('footer.php'); ?>
+                <?php include('footerMobile.php'); ?>
 
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
