@@ -23,5 +23,5 @@
         VALUES ('$orNumber','$IDNumber','$memType', '$lastName', '$firstName', '$middleName', '$address', '$contactNumber','$bday','$age', '$gender', '$validDate', '$expiryDate')";
         $result = mysqli_query($db, $query);
 
-        header("Location: registration.php");
+        header("Location: index.php");
 ?>
