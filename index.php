@@ -6,8 +6,6 @@
 
                             <style>
 
-@media (min-width: 768px) and (max-width: 1280px)
-
 body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
                                 /* Full-width input fields */
@@ -139,17 +137,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
    
 </head>
 
-<body class="fix-header">
+<body>
     <?php include('header.php'); ?>
 </body>
 
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav slimscrollsidebar">
-                <ul class="nav" id="side-menu">
-                    <?php include('sidebar.php'); ?>
-                </ul>
-            </div>
-        </div>
  
         <div id="page-wrapper">
             <div class="container-fluid">
@@ -411,48 +402,7 @@ require 'model/reg.php';
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script type="text/javascript">
-        function exportTableToExcel(tableID, filename = ''){
-    var downloadLink;
-    var dataType = 'application/vnd.ms-excel';
-    var tableSelect = document.getElementById(tableID);
-    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-    
-    // Specify file name
-    filename = filename?filename+'.xls':'excel_data.xls';
-    
-    // Create download link element
-    downloadLink = document.createElement("a");
-    
-    document.body.appendChild(downloadLink);
-    
-    if(navigator.msSaveOrOpenBlob){
-        var blob = new Blob(['\ufeff', tableHTML], {
-            type: dataType
-        });
-        navigator.msSaveOrOpenBlob( blob, filename);
-    }else{
-        // Create a link to the file
-        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-    
-        // Setting the file name
-        downloadLink.download = filename;
-        
-        //triggering the function
-        downloadLink.click();
-    }
-}
-    </script>
-    <script type="text/javascript">
-    $('.confirmation').on('click', function () {
-        return confirm('Are you sure you want to DELETE?');
-    });
-</script>
-    <style>
-    #exportButton {
-        border-radius: 0;
-    }
-</style>
+
 <script>
 function validateForm() {
     var orNumber = document.forms["addmem"]["orNum"].value;
