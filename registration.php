@@ -41,13 +41,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 .modal-body{
-                                    height: 450px;
+                                    height: 650px;
                                     width: 100%;
                                     overflow:hidden;
                                 }
-                                .modal-body:hover{
-                                    overflow-y:auto;
-                                }
+
                                 
                                 .popupheader{
                                     background-color:black;
