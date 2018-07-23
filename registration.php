@@ -41,9 +41,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 .modal-body{
-                                    height: 650px;
+                                    height: 600px;
                                     width: 100%;
                                     overflow:hidden;
+                                }
+
+				.modal-body:hover{
+                                    overflow-y:auto;
                                 }
 
                                 
