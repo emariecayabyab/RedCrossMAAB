@@ -251,10 +251,10 @@ require 'model/reg.php';
                                 <div class = "col-md-6 pull-right">
                                     <select name="type">
                                         <option value="Classic">Classic</option>
-                                        <option value="Bronze">Premier Bronze</option>
-                                        <option value="Silver">Premier Silver</option>
-                                        <option value="Gold">Premier Gold</option>
-                                        <option value="Platinum"> Premier Platinum </option>
+                                        <option value="Premier Bronze">Premier Bronze</option>
+                                        <option value="Premier Silver">Premier Silver</option>
+                                        <option value="Premier Gold">Premier Gold</option>
+                                        <option value="Premier Platinum"> Premier Platinum </option>
                                         <option value="Senior">Senior</option>
                                         <option value="Senior Plus">Senior Plus</option>
                                     </select>
