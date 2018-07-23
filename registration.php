@@ -395,7 +395,7 @@ require 'model/reg.php';
         <div class="modal-footer">
         <div class="row">
             
-            <button id="addmember" type="submit" class="btn btn-danger">Add</button>
+            <button id="addmember" type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to Add?');">Add</button>
             </p>
         </div>
         </div>
