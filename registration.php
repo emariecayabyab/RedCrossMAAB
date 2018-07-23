@@ -481,27 +481,8 @@ function validateForm() {
         alert("First Name must be filled out.");
         return false;
     }
-    if (middleName == "") {
-        alert("Middle Name must be filled out.");
-        return false;
-    }
     if (lastName == "") {
         alert("Last Name must be filled out.");
-        return false;
-    }
-    if (age=< 0) {
-        alert("Please use valid Age number only.");
-        return false;
-    } else if (age == "") {
-        alert("Please use valid Age number only.");
-        return false;
-    }
-    if (add == "") {
-        alert("Address must be filled out.");
-        return false;
-    }
-    if (contact== "") {
-        alert("Contact Number must be filled out. If none, please put n/a.");
         return false;
     }
     if (byr == "") {
