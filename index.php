@@ -92,13 +92,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 div.modal-xl {
-                                    width: 70%;
+                                    width: 95%;
                                 }
                                 
                                 p{
                                     text-align:left;
                                     font-family: sans-serif;
-                                    font-size: 20.5px;
+                                    font-size: 18px;
                                 }
 
                                 </style>
@@ -230,10 +230,10 @@ require 'model/reg.php';
                                 <div class = "col-md-6 pull-right">
                                     <select name="type">
                                         <option value="Classic">Classic</option>
-                                        <option value="Bronze">Premier Bronze</option>
-                                        <option value="Silver">Premier Silver</option>
-                                        <option value="Gold">Premier Gold</option>
-                                        <option value="Platinum"> Premier Platinum </option>
+                                        <option value="Premier Bronze">Premier Bronze</option>
+                                        <option value="Premier Silver">Premier Silver</option>
+                                        <option value="Premier Gold">Premier Gold</option>
+                                        <option value="Premier Platinum"> Premier Platinum </option>
                                         <option value="Senior">Senior</option>
                                         <option value="Senior Plus">Senior Plus</option>
                                     </select>
@@ -280,14 +280,16 @@ require 'model/reg.php';
                 <input class="form-control" autocomplete="off" type = "text" id="fname" name="fname" placeholder="First Name...">
                 <input class="form-control" autocomplete="off" type = "text" id="midname" name="midname" placeholder="Middle Name...">
                 <input class="form-control" autocomplete="off" type = "text" id="lname" name="lname" placeholder="Last Name...">
-        </div>
-    <div class="row">   
+				
+				<div class="row">   
             <div class="col col-lg-2">
                 <label for="bday">Birthday</label>
             </div>
-            <div class="col-sm-2">
-                <input class="form-control" autocomplete="off" type = "text" id="byear" name="byear" label="year" placeholder="Year">
+            <div class="col-sm-4" >
+                <input class="form-control"  autocomplete="off" type = "text" id="byear" name="byear" label="year" placeholder="Year">
             </div>
+				
+				<div class ="col-sm-2">
                 <select name="bmonth">
                     <option disabled selected value="Month">Month</option>
                     <option value="01">January</option>
@@ -338,6 +340,10 @@ require 'model/reg.php';
                     <option value="31">31</option>
                 </select>
             </div>
+			</div>
+				
+        </div>
+    
 
             <div class ="col-sm-2">
                 <label for="age">Age</label>
