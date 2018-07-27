@@ -159,6 +159,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
                     <div class="col-lg-8 col-sm-6 ">
                         <h4 class="page-title">Philippine Red Cross New Membership List</h4>
                     </div>
+
+                        <div class="col-sm-3 pull-right">
+                        <button onclick="exportTableToExcel('tblData','<?php
+                        echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
+                        </button>
+                    </div>
                 </div>
                 <!-- /row -->
                 
@@ -224,11 +230,7 @@ require 'model/reg.php';
                         </div>
 
                 <div class="row">
-                    <div class="col-sm-3 pull-right">
-                        <button onclick="exportTableToExcel('tblData','<?php
-                        echo "registration list as of " . date("Y/m/d");?>')" type="button" class="btn btn-danger btn-block waves-effect waves-light" >Save as Excel
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>
