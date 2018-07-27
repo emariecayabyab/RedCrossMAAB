@@ -1,9 +1,13 @@
+FIX V2:
 
+  - EDIT BUTTON (INDEX.PHP, REGISTER.PHP)
+  - TO AND FROM DATES
+  - COMPANY/ ORGANIZATION FIELD AND COLUMN
 
  FIX:
-  - modal X button
-  - table font size and face (should not be scrollable)
-  - modal design
+  - modal X button (DONE)
+  - table font size and face (should not be scrollable) (DONE)
+  - modal design (DONE)
   - Responsive design except side bar (DONE)
   - save excel button (DONE)
   - validation of all fields should not be empty (DONE)
@@ -12,7 +16,7 @@
 
 
   - Manual
-  - Flow chart
+  - Flow chart(done)
   - database AUG 2017-2018
 
 
