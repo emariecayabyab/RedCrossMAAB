@@ -112,6 +112,8 @@
 
                             </h3>
                             <div class="table-responsive">
+                                <?php
+                    require 'model/notif.php'; ?>
                                 <table id="exmem" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                     <tr>
@@ -129,34 +131,21 @@
                 </thead>
                 <tbody id="myTable">
                 <?php
-                    require 'model/notif.php';
-                    foreach ($members as $member) {
-
-                    $orNum = $member->getOrNum();
-                    $IDNumber = $member->getIdNum();
-                    $lastName = $member->getlName();
-                    $firstName = $member->getfName();
-                    $middleName = $member->getmName();
-                    $address = $member->getaddress();
-                    $contactNumber = $member->getconNum();
-                    $validDate = $member->getvalDate();
-                    $expiryDate = $member->geteDate();
-
-                    echo <<<FRAG
-                    <tr>
-                    <td>$orNum</td>
-                    <td>$IDNumber</td>
-                    <td>Baguio City</td>
-                    <td>$lastName</td>
-                    <td>$firstName</td>
-                    <td>$middleName</td>
-                    <td>$address</td>
-                    <td>$contactNumber</td>
-                    <td>$validDate</td>
-                    <td>$expiryDate</td>
-                    </tr>
-FRAG;
-        }
+                     while($row = mysqli_fetch_array($result)){
+        echo "<tr>"; 
+        echo "<td>" .  $row['orNumber'] . "</td>";
+        echo "<td>" .  $row['IDNumber'] . "</td>";
+        echo "<td>Baguio City</td>";
+        echo "<td>" .  $row['lastName'] . "</td>";
+        echo "<td>" .  $row['firstName'] . "</td>";
+        echo "<td>" .  $row['middleName'] . "</td>";
+        echo "<td>" .  $row['address'] . "</td>";
+        echo "<td>" .  $row['contactNumber'] . "</td>";
+        echo "<td>" .  $row['validDate'] . "</td>";
+        echo "<td>" .  $row['expiryDate'] . "</td>";
+        echo "</tr>";
+            }
+    echo '</table>';
     ?>
                 </tbody>
                                 </table>
