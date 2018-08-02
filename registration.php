@@ -219,7 +219,7 @@ require 'model/reg.php';
         echo "<td>" .  $row['gender'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";
-        echo "<td><a href=delete.php?id=".$row['IDNumber']."><button type='button' class='close'>&times;</button></a></td>";
+        echo "<td><a href='delete.php?id=".$row['IDNumber']."' onclick='return confirm(\"Are you sure you want to DELETE this?\")'><button type='button' class='close'>&times;</button></a></td>";
         echo "</tr>";
             }
  
