@@ -102,7 +102,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 p{
                                     text-align:left;
                                     font-family: sans-serif;
-                                    font-size: 20.5px;
+                                    font-size: 15px;
                                 }
 
                                 </style>
@@ -241,9 +241,9 @@ require 'model/reg.php';
           <div class="shape"></div>
           <div class="modal-content">
             <!-- Modal Header -->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="CNM">&times;</button>
             <div class = "modal-body">
-            <p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
+            <b>IMPORTANT NOTE:&nbsp;&nbsp;MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</b></br></br>
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
                             <form name="addmem" action="formModPC.php" method="post" onsubmit="return validateForm()">
