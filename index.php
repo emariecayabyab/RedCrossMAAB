@@ -6,6 +6,8 @@
 
                             <style>
 
+@media (min-width: 768px) and (max-width: 1280px)
+
 body {font-family: Arial, Helvetica, sans-serif;}
                                 * {box-sizing: border-box}
                                 /* Full-width input fields */
@@ -39,13 +41,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 .modal-body{
-                                    height: 450px;
+                                    height: 600px;
                                     width: 100%;
                                     overflow:hidden;
                                 }
-                                .modal-body:hover{
+
+                .modal-body:hover{
                                     overflow-y:auto;
                                 }
+
                                 
                                 .popupheader{
                                     background-color:black;
@@ -92,13 +96,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
 
                                 div.modal-xl {
-                                    width: 95%;
+                                    width: 70%;
                                 }
                                 
                                 p{
                                     text-align:left;
                                     font-family: sans-serif;
-                                    font-size: 18px;
+                                    font-size: 15px;
                                 }
 
                                 </style>
@@ -115,7 +119,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <!-- Bootstrap Core CSS -->
     <link href="viewsControl/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+
     <!-- animation CSS -->
     <link href="viewsControl/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -137,17 +141,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
    
 </head>
 
-<body>
-    <?php include('headerMobile.php'); ?>
+<body class="fix-header">
+    <?php include('header.php'); ?>
 </body>
 
  
-        
+        <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-8 col-sm-6 ">
                         <h4 class="page-title">Philippine Red Cross New Membership List</h4>
                     </div>
+
                 </div>
                 <!-- /row -->
                 
@@ -178,12 +183,14 @@ require 'model/reg.php';
               <th>FIRST NAME</th>
               <th>MIDDLE NAME</th>
               <th>ADDRESS</th>
+              <th>ORGANIZATION</th>
               <th>CONTACT NUMBER</th>
               <th>BIRTHDAY</th>
               <th>AGE</th>
               <th>GENDER</th>
               <th>REGISTRATION DATE</th>
               <th>EXPIRATION DATE</th>
+
           </tr>';
 
     while($row = mysqli_fetch_array($result)){
@@ -195,13 +202,13 @@ require 'model/reg.php';
         echo "<td>" .  $row['firstName'] . "</td>";
         echo "<td>" .  $row['middleName'] . "</td>";
         echo "<td>" .  $row['address'] . "</td>";
+        echo "<td>" .  $row['organization'] . "</td>";
         echo "<td>" .  $row['contactNumber'] . "</td>";
         echo "<td>" .  $row['birthday'] . "</td>";
         echo "<td>" .  $row['age'] . "</td>";
         echo "<td>" .  $row['gender'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";
-        echo "</tr>";
             }
  
     echo '</table>';
@@ -209,6 +216,10 @@ require 'model/reg.php';
 
                         </div>
                         </div>
+
+                <div class="row">
+
+                </div>
             </div>
         </div>
 
@@ -218,9 +229,9 @@ require 'model/reg.php';
           <div class="shape"></div>
           <div class="modal-content">
             <!-- Modal Header -->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="CNM">&times;</button>
             <div class = "modal-body">
-            <p><b>PLEASE NOTE:&nbsp;&nbsp;</b>MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</p>
+            <b>IMPORTANT NOTE:&nbsp;&nbsp;MAKE SURE THE DETAILS YOU ENTERED ARE CORRECT BEFORE ADDING.</b></br></br>
               <h4 class="modal-title">Create New Member</h4>
                         <div class="row">
                             <form name="addmem" action="formMod.php" method="post" onsubmit="return validateForm()">
@@ -265,6 +276,12 @@ require 'model/reg.php';
             <div class="col-sm-4">
                 <input class="form-control" autocomplete="off" type = "text" id="idNum" name="idNum">
             </div>
+            <div class="col col-lg-2">
+                <label for="org">Organization</label>   
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" autocomplete="off" type = "text" id="org" name="org">
+            </div>
         <div class="col col-lg-2">
                 <label for="contact">Contact Number</label>   
             </div>
@@ -280,16 +297,14 @@ require 'model/reg.php';
                 <input class="form-control" autocomplete="off" type = "text" id="fname" name="fname" placeholder="First Name...">
                 <input class="form-control" autocomplete="off" type = "text" id="midname" name="midname" placeholder="Middle Name...">
                 <input class="form-control" autocomplete="off" type = "text" id="lname" name="lname" placeholder="Last Name...">
-				
-				<div class="row">   
+        </div>
+    <div class="row">   
             <div class="col col-lg-2">
                 <label for="bday">Birthday</label>
             </div>
-            <div class="col-sm-4" >
-                <input class="form-control"  autocomplete="off" type = "text" id="byear" name="byear" label="year" placeholder="Year">
+            <div class="col-sm-2">
+                <input class="form-control" autocomplete="off" type = "text" id="byear" name="byear" label="year" placeholder="Year">
             </div>
-				
-				<div class ="col-sm-2">
                 <select name="bmonth">
                     <option disabled selected value="Month">Month</option>
                     <option value="01">January</option>
@@ -340,10 +355,6 @@ require 'model/reg.php';
                     <option value="31">31</option>
                 </select>
             </div>
-			</div>
-				
-        </div>
-    
 
             <div class ="col-sm-2">
                 <label for="age">Age</label>
@@ -392,21 +403,56 @@ require 'model/reg.php';
 </div>
 
             <!-- /.container-fluid -->
-
-                <?php include('footerMobile.php'); ?>
+            <footer>
+                <?php include('footer.php'); ?>
+            </footer>
 
     <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
     <!--slimscroll JavaScript -->
     <script src="js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-
+    <script type="text/javascript">
+        function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+    </script>
+    <style>
+    #exportButton {
+        border-radius: 0;
+    }
+</style>
 <script>
 function validateForm() {
     var orNumber = document.forms["addmem"]["orNum"].value;
@@ -470,7 +516,7 @@ function validateForm() {
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
-                    "targets": 8,
+                    "targets": 9,
                     "searchable": false,
                 }]
             });

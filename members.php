@@ -186,6 +186,7 @@ div.container {
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -205,6 +206,7 @@ div.container {
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -219,6 +221,7 @@ div.container {
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -244,6 +247,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -263,6 +267,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -277,6 +282,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -302,6 +308,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -321,6 +328,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -335,6 +343,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -361,6 +370,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -380,6 +390,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -394,6 +405,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -421,6 +433,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -440,6 +453,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -454,6 +468,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -481,6 +496,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -500,6 +516,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -514,6 +531,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -542,6 +560,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -561,6 +580,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -575,6 +595,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>
@@ -601,6 +622,7 @@ FRAG;
                         <th>FIRST NAME</th>
                         <th>MIDDLE NAME</th>
                         <th>ADDRESS</th>
+                        <th>ORGANIZATION</th>
                         <th>CONTACT NUMBER</th>
                         <th>BIRTHDAY</th>
                         <th>AGE</th>
@@ -620,6 +642,7 @@ FRAG;
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $birthday = $member->getBday();
                     $age = $member->getAge();
@@ -634,6 +657,7 @@ FRAG;
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$birthday</td>
                     <td>$age</td>

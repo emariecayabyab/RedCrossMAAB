@@ -124,6 +124,7 @@
                         <th><center>FIRST NAME</center></th>
                         <th><center>MIDDLE NAME</center></th>
                         <th><center>ADDRESS</center></th>
+                        <th><center>ORGANIZATION</center></th>
                         <th><center>CONTACT NUMBER</center></th>
                         <th><center>REGISTRATION DATE</center></th>
                         <th><center>EXPIRATION DATE</center></th>
@@ -140,6 +141,7 @@
         echo "<td>" .  $row['firstName'] . "</td>";
         echo "<td>" .  $row['middleName'] . "</td>";
         echo "<td>" .  $row['address'] . "</td>";
+        echo "<td>" .  $row['organization'] . "</td>";
         echo "<td>" .  $row['contactNumber'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";

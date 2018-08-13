@@ -93,6 +93,7 @@
                         <th><center>FIRST NAME</center></th>
                         <th><center>MIDDLE NAME</center></th>
                         <th><center>ADDRESS</center></th>
+                        <th><center>ORGANIZATION</center></th>
                         <th><center>CONTACT NUMBER</center></th>
                         <th><center>REGISTRATION DATE</center></th>
                         <th><center>EXPIRATION DATE</center></th>
@@ -109,6 +110,7 @@
                     $firstName = $member->getfName();
                     $middleName = $member->getmName();
                     $address = $member->getaddress();
+                    $organization = $member->getOrg();
                     $contactNumber = $member->getconNum();
                     $validDate = $member->getvalDate();
                     $expiryDate = $member->geteDate();
@@ -121,6 +123,7 @@
                     <td>$firstName</td>
                     <td>$middleName</td>
                     <td>$address</td>
+                    <td>$organization</td>
                     <td>$contactNumber</td>
                     <td>$validDate</td>
                     <td>$expiryDate</td>
@@ -171,7 +174,7 @@ FRAG;
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
-                    "targets": 8,
+                    "targets": 9,
                     "searchable": false,
                 }]
             });

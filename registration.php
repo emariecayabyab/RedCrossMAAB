@@ -195,6 +195,7 @@ require 'model/reg.php';
               <th>FIRST NAME</th>
               <th>MIDDLE NAME</th>
               <th>ADDRESS</th>
+              <th>ORGANIZATION</th>
               <th>CONTACT NUMBER</th>
               <th>BIRTHDAY</th>
               <th>AGE</th>
@@ -213,13 +214,14 @@ require 'model/reg.php';
         echo "<td>" .  $row['firstName'] . "</td>";
         echo "<td>" .  $row['middleName'] . "</td>";
         echo "<td>" .  $row['address'] . "</td>";
+        echo "<td>" .  $row['organization'] . "</td>";
         echo "<td>" .  $row['contactNumber'] . "</td>";
         echo "<td>" .  $row['birthday'] . "</td>";
         echo "<td>" .  $row['age'] . "</td>";
         echo "<td>" .  $row['gender'] . "</td>";
         echo "<td>" .  $row['validDate'] . "</td>";
         echo "<td>" .  $row['expiryDate'] . "</td>";
-        echo "<td><a href='delete.php?id=".$row['IDNumber']."' onclick='return confirm(\"Are you sure you want to DELETE this?\")'><button type='button' class='close'>&times;</button></a></td>";
+        echo "<td><a href='delete.php?id=".$row['IDNumber']."' onclick='return confirm(\"Are you sure you want to DELETE ".$row['firstName']." ".$row['lastName']." Membership?\")'><button type='button' class='close'>&times;</button></a></td>";
         echo "</tr>";
             }
  
@@ -287,6 +289,12 @@ require 'model/reg.php';
             </div>
             <div class="col-sm-4">
                 <input class="form-control" autocomplete="off" type = "text" id="idNum" name="idNum">
+            </div>
+            <div class="col col-lg-2">
+                <label for="org">Organization</label>   
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" autocomplete="off" type = "text" id="org" name="org">
             </div>
         <div class="col col-lg-2">
                 <label for="contact">Contact Number</label>   
@@ -524,7 +532,7 @@ function validateForm() {
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs": [{
                     
-                    "targets": 8,
+                    "targets": 9,
                     "searchable": false,
                 }]
             });
